@@ -716,6 +716,21 @@ strong{ font-weight:600; }
   color: var(--muted);
 }
 
+/* Abgrenzung section */
+.abgrenzung{
+  padding: 24px 0 18px;
+  text-align: center;
+}
+
+.abgrenzung-text{
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: 0.1px;
+  font-style: italic;
+  opacity: 0.85;
+}
+
 /* Cards grid (editorial spacing, not dashboard-y) */
 .grid{
   padding-top: 18px;
