@@ -3,80 +3,236 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HistoTeach – Site in Development</title>
-  <meta name="description" content="HistoTeach ist gerade im Aufbau. Bald verfügbar." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>HistoTeach — im Aufbau</title>
+  <meta name="description" content="HistoTeach ist im Aufbau. Bald verfügbar." />
+  <meta name="theme-color" content="#FBFCF6" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E0F12" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <div class="bg"></div>
+  <!-- Top bar (quiet) -->
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="HistoTeach">
+      <span class="mark" aria-hidden="true">H</span>
+      <span class="brandtext">
+        <span class="brandname">HistoTeach</span>
+        <span class="brandsub">Lernplattform • im Aufbau</span>
+      </span>
+    </a>
 
-  <main class="wrap">
-    <header class="top">
-      <div class="brand">
-        <div class="logo">H</div>
-        <div>
-          <div class="name">HistoTeach</div>
-          <div class="tag">Lernplattform • im Aufbau</div>
-        </div>
+    <div class="topbar-actions">
+      <a class="link subtle" href="#kontakt">Kontakt</a>
+      <button class="iconbtn" id="menuBtn" aria-label="Menü öffnen" aria-controls="drawer" aria-expanded="false">
+        <span class="icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Drawer -->
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <div class="drawer-title">
+        <span class="dotgold" aria-hidden="true"></span>
+        Menü
       </div>
+      <button class="iconbtn" id="closeBtn" aria-label="Menü schließen">
+        <span class="icon close" aria-hidden="true"></span>
+      </button>
+    </div>
 
-      <a class="pill" href="#kontakt">Kontakt</a>
-    </header>
+    <nav class="drawer-nav" aria-label="Navigation">
+      <a href="#status" class="drawer-link">Status</a>
+      <a href="#release" class="drawer-link">Release</a>
+      <a href="#kontakt" class="drawer-link">Kontakt</a>
+      <a href="mailto:kontakt@histoteach.de" class="drawer-link">E-Mail schreiben</a>
+    </nav>
 
+    <div class="drawer-foot">
+      <div class="meta">
+        <div class="meta-label">Akzent</div>
+        <div class="meta-value">Babyblau + Gold (sparsam)</div>
+      </div>
+      <div class="meta">
+        <div class="meta-label">Design</div>
+        <div class="meta-value">Editorial • ruhig • clean</div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="backdrop" id="backdrop" hidden></div>
+
+  <!-- Main -->
+  <main class="wrap">
+    <!-- Hero -->
     <section class="hero">
-      <h1>Site in Development.</h1>
-      <p>
-        Wir bauen gerade an <strong>HistoTeach</strong> – einer Lernplattform für Geschichte.
-        Bald gibt’s hier mehr. 🚧
-      </p>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">
+            <span class="dotgold" aria-hidden="true"></span>
+            Site in Development
+          </p>
 
-      <div class="cards">
-        <div class="card">
-          <div class="card-title">Status</div>
-          <div class="card-text">Backend & Inhalte in Arbeit</div>
-          <div class="progress">
-            <div class="bar" style="width: 35%"></div>
+          <h1 class="headline">
+            Geschichte, aber kuratiert —
+            <span class="headline-accent">HistoTeach</span>.
+          </h1>
+
+          <p class="lead">
+            Wir bauen an einer Lernplattform, die sich weniger nach Schulbuch und mehr nach
+            <strong>Pinterest History Aesthetic</strong> anfühlt: ruhig, visuell, klar.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn primary" href="#status">Status ansehen</a>
+            <a class="btn ghost" href="mailto:kontakt@histoteach.de?subject=HistoTeach%20Updates&body=Hi%2C%20ich%20m%C3%B6chte%20Updates%20zur%20Beta.">
+              Updates anfragen
+            </a>
           </div>
-          <div class="small">Aktueller Stand: 35%</div>
+
+          <div class="micro">
+            <span class="chip">Warm-Whites</span>
+            <span class="chip">Babyblau Akzente</span>
+            <span class="chip">Subtile Motion</span>
+          </div>
         </div>
 
-        <div class="card">
-          <div class="card-title">Release</div>
-          <div class="card-text">Erste Beta geplant</div>
-          <div class="small">Wenn du informiert werden willst: Schreib uns.</div>
-          <a class="btn" href="mailto:kontakt@histoteach.de?subject=HistoTeach%20Beta&body=Hi%2C%20ich%20m%C3%B6chte%20Updates%20zur%20Beta.">
-            Updates anfragen
+        <figure class="hero-visual" aria-label="Stimmungsbild">
+          <!-- Optional: Lege eine Datei 'hero.jpg' ins Repo, dann nutzt die Seite sie automatisch -->
+          <img src="hero.jpg" alt="Stimmungsbild: Geschichte, Notizen, Karten, Archivgefühl" loading="eager" />
+          <figcaption class="caption">
+            <span class="caption-label">Mood</span>
+            <span class="caption-text">Archivlicht • Papier • Karten • Ruhe</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Content layout like your sketch: image + two text blocks -->
+    <section class="grid" aria-label="Status und Release">
+      <article class="card" id="status">
+        <header class="card-head">
+          <h2 class="card-title">Status</h2>
+          <span class="pill">Build</span>
+        </header>
+
+        <p class="card-text">Backend & Inhalte in Arbeit</p>
+
+        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="35" aria-label="Projektfortschritt 35%">
+          <div class="progress-bar" style="width: 35%"></div>
+        </div>
+
+        <div class="card-meta">
+          <span class="muted">Aktueller Stand:</span>
+          <span class="strong">35%</span>
+        </div>
+
+        <ul class="list">
+          <li>Auth & Nutzerbasis</li>
+          <li>Kurs-/Inhaltsstruktur</li>
+          <li>Designsystem wird finalisiert</li>
+        </ul>
+      </article>
+
+      <article class="card" id="release">
+        <header class="card-head">
+          <h2 class="card-title">Release</h2>
+          <span class="pill ghost">Beta</span>
+        </header>
+
+        <p class="card-text">Erste Beta geplant</p>
+
+        <div class="callout">
+          <div class="callout-title">Wenn du informiert werden willst</div>
+          <div class="callout-text">Schreib kurz eine Mail — keine Liste, kein Spam, nur Updates.</div>
+          <a class="btn primary small" href="mailto:kontakt@histoteach.de?subject=HistoTeach%20Beta&body=Hi%2C%20ich%20m%C3%B6chte%20bei%20der%20Beta%20dabei%20sein.">
+            Mail öffnen
           </a>
         </div>
 
-        <div class="card" id="kontakt">
-          <div class="card-title">Kontakt</div>
-          <div class="card-text">Fragen oder Feedback?</div>
-          <div class="contact">
-            <a href="mailto:kontakt@histoteach.de">kontakt@histoteach.de</a>
-            <span class="dot">•</span>
-            <a href="https://histoteach.de" aria-disabled="true" class="muted">histoteach.de</a>
+        <div class="note">
+          <span class="dotgold" aria-hidden="true"></span>
+          <span class="muted">Hinweis:</span> Diese Seite speichert keine Daten.
+        </div>
+      </article>
+
+      <article class="card wide" id="kontakt">
+        <header class="card-head">
+          <h2 class="card-title">Kontakt</h2>
+          <span class="pill">Info</span>
+        </header>
+
+        <div class="contact">
+          <div class="contact-block">
+            <div class="muted">E-Mail</div>
+            <a class="link" href="mailto:kontakt@histoteach.de">kontakt@histoteach.de</a>
           </div>
-          <div class="small muted">
-            Hinweis: Das ist eine Übergangsseite. Daten werden hier nicht gespeichert.
+
+          <div class="contact-block">
+            <div class="muted">Domain</div>
+            <a class="link" href="https://www.histoteach.de">www.histoteach.de</a>
+          </div>
+
+          <div class="contact-block">
+            <div class="muted">Kurz</div>
+            <div class="strong">Feedback willkommen.</div>
           </div>
         </div>
-      </div>
-
-      <footer class="footer">
-        <span>© <span id="y"></span> HistoTeach</span>
-        <span class="muted">•</span>
-        <span class="muted">Im Aufbau</span>
-      </footer>
+      </article>
     </section>
+
+    <footer class="footer">
+      <span>© <span id="y"></span> HistoTeach</span>
+      <span class="sep">•</span>
+      <span class="muted">Im Aufbau</span>
+    </footer>
   </main>
 
   <script>
+    // Year
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Drawer logic (clean, minimal, accessible)
+    const drawer = document.getElementById('drawer');
+    const menuBtn = document.getElementById('menuBtn');
+    const closeBtn = document.getElementById('closeBtn');
+    const backdrop = document.getElementById('backdrop');
+
+    function openDrawer() {
+      drawer.classList.add('open');
+      drawer.setAttribute('aria-hidden', 'false');
+      menuBtn.setAttribute('aria-expanded', 'true');
+      backdrop.hidden = false;
+      requestAnimationFrame(() => backdrop.classList.add('show'));
+      document.body.classList.add('lock');
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      drawer.setAttribute('aria-hidden', 'true');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      backdrop.classList.remove('show');
+      window.setTimeout(() => { backdrop.hidden = true; }, 180);
+      document.body.classList.remove('lock');
+    }
+
+    menuBtn.addEventListener('click', openDrawer);
+    closeBtn.addEventListener('click', closeDrawer);
+    backdrop.addEventListener('click', closeDrawer);
+
+    // Close on Escape
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+    });
+
+    // Close when clicking a link
+    drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
   </script>
 </body>
 </html>
