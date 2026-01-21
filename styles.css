@@ -569,6 +569,114 @@ strong{ font-weight:600; }
   color: var(--text);
 }
 
+/* Themes section (horizontal scroll) */
+.themes-section{
+  padding: 34px 0 18px;
+}
+
+.themes-header{
+  margin-bottom: 18px;
+}
+
+.themes-title{
+  font-family: var(--serif);
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  font-size: clamp(24px, 3.2vw, 32px);
+  margin: 0 0 6px;
+}
+
+.themes-subtitle{
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: 0.1px;
+}
+
+.themes-scroll{
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 4px 0 14px;
+}
+
+.themes-scroll::-webkit-scrollbar{
+  display: none;
+}
+
+.theme-card{
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.62);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  scroll-snap-align: start;
+  transition: transform var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease);
+}
+
+@media (prefers-color-scheme: dark){
+  .theme-card{ background: rgba(255,255,255,0.05); }
+}
+
+[data-theme="dark"] .theme-card{
+  background: rgba(255,255,255,0.05);
+}
+
+.theme-card:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--shadowFocus);
+}
+
+.card-image{
+  width: 100%;
+  height: 160px;
+  background: 
+    radial-gradient(circle at 65% 35%, rgba(199,162,94,0.18), transparent 50%),
+    radial-gradient(ellipse at 25% 60%, rgba(159,183,229,0.14), transparent 52%),
+    linear-gradient(145deg, var(--gw), var(--bw));
+  border-bottom: 1px solid var(--line);
+}
+
+@media (prefers-color-scheme: dark){
+  .card-image{
+    background: 
+      radial-gradient(circle at 65% 35%, rgba(199,162,94,0.12), transparent 50%),
+      radial-gradient(ellipse at 25% 60%, rgba(159,183,229,0.10), transparent 52%),
+      linear-gradient(145deg, var(--hbw), var(--gw));
+  }
+}
+
+[data-theme="dark"] .card-image{
+  background: 
+    radial-gradient(circle at 65% 35%, rgba(199,162,94,0.12), transparent 50%),
+    radial-gradient(ellipse at 25% 60%, rgba(159,183,229,0.10), transparent 52%),
+    linear-gradient(145deg, var(--hbw), var(--gw));
+}
+
+.theme-card-title{
+  margin: 0;
+  padding: 14px 14px 6px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: var(--text);
+}
+
+.theme-card-text{
+  margin: 0;
+  padding: 0 14px 14px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
 /* Cards grid (editorial spacing, not dashboard-y) */
 .grid{
   padding-top: 18px;
