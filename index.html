@@ -37,10 +37,6 @@
     </a>
 
     <div class="topbar-actions">
-      <a class="link subtle" href="kontakt.html">Kontakt</a>
-      <button class="iconbtn" id="themeBtn" aria-label="Theme wechseln">
-        <span class="theme-icon" aria-hidden="true">☀︎</span>
-      </button>
       <button class="iconbtn" id="menuBtn" aria-label="Menü öffnen" aria-controls="drawer" aria-expanded="false">
         <span class="icon" aria-hidden="true"></span>
       </button>
@@ -61,8 +57,10 @@
 
     <nav class="drawer-nav" aria-label="Navigation">
       <a href="index.html" class="drawer-link">Startseite</a>
+      <a href="fortschritt.html" class="drawer-link">Fortschritt</a>
+      <a href="release.html" class="drawer-link">Release</a>
+      <a href="index.html#themen" class="drawer-link">Themen</a>
       <a href="ueber-uns.html" class="drawer-link">Über uns</a>
-      <a href="kontakt.html" class="drawer-link">Kontakt</a>
       <a href="login.html" class="drawer-link">Login</a>
       <a href="registrierung.html" class="drawer-link">Registrierung</a>
       <a href="impressum.html" class="drawer-link">Impressum</a>
@@ -77,6 +75,10 @@
         <div class="meta-label">Design</div>
         <div class="meta-value">Editorial • ruhig • clean</div>
       </div>
+      <button class="theme-toggle-drawer" id="themeBtn" aria-label="Theme wechseln">
+        <span class="theme-icon" aria-hidden="true">☀︎</span>
+        <span class="theme-label">Theme: <span id="themeLabel">Hell</span></span>
+      </button>
     </div>
   </aside>
 
@@ -102,10 +104,8 @@
           </p>
 
           <div class="hero-cta">
-            <a class="btn primary" href="#status">Projektstatus ansehen</a>
-            <a class="btn ghost" href="mailto:noah@histoteach.de?subject=HistoTeach%20Updates&body=Hi%2C%20ich%20m%C3%B6chte%20Updates%20zur%20Beta.">
-              Updates erhalten
-            </a>
+            <a class="btn primary" href="fortschritt.html">Projektstatus ansehen</a>
+            <a class="btn ghost" href="release.html">Release / Beta</a>
           </div>
 
           <div class="micro">
@@ -127,7 +127,7 @@
     </section>
 
     <!-- Themes section (horizontal scroll) -->
-    <section class="themes-section" aria-label="Themen">
+    <section class="themes-section" id="themen" aria-label="Themen">
       <header class="themes-header">
         <h2 class="themes-title">Themen (Auswahl)</h2>
         <p class="themes-subtitle">Kuratierte historische Epochen und Umbrüche</p>
@@ -184,75 +184,7 @@
       </div>
     </section>
 
-    <!-- Content layout like your sketch: image + two text blocks -->
-    <section class="grid" aria-label="Status und Release">
-      <article class="card" id="status">
-        <header class="card-head">
-          <h2 class="card-title">Projektstatus</h2>
-          <span class="pill">Build</span>
-        </header>
 
-        <p class="card-text">Backend und Inhalte befinden sich aktuell im Aufbau.</p>
-
-        <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="35" aria-label="Projektfortschritt 35%">
-          <div class="progress-bar" style="width: 35%"></div>
-        </div>
-
-        <div class="card-meta">
-          <span class="muted">Aktueller Stand:</span>
-          <span class="strong">35%</span>
-        </div>
-
-        <ul class="list">
-          <li>Authentifizierung & Nutzerbasis</li>
-          <li>Kurs- und Inhaltsstruktur</li>
-          <li>Designsystem in Finalisierung</li>
-        </ul>
-      </article>
-
-      <article class="card" id="release">
-        <header class="card-head">
-          <h2 class="card-title">Release</h2>
-          <span class="pill ghost">Beta</span>
-        </header>
-
-        <p class="card-text">Eine erste öffentliche Beta ist geplant. Wenn du informiert werden möchtest, reicht eine kurze Mail — keine Liste, kein Spam.</p>
-
-        <div class="callout">
-          <a class="btn primary small" href="mailto:noah@histoteach.de?subject=HistoTeach%20Beta&body=Hi%2C%20ich%20m%C3%B6chte%20bei%20der%20Beta%20dabei%20sein.">
-            Mail öffnen
-          </a>
-        </div>
-
-        <div class="note">
-          <span class="dotgold" aria-hidden="true"></span>
-          <span class="muted">Diese Seite speichert keine personenbezogenen Daten.</span>
-        </div>
-      </article>
-
-      <article class="card wide" id="kontakt">
-        <header class="card-head">
-          <h2 class="card-title">Kontakt</h2>
-          <span class="pill">Info</span>
-        </header>
-
-        <div class="contact">
-          <div class="contact-block">
-            <div class="muted">E-Mail</div>
-            <a class="link" href="mailto:noah@histoteach.de">noah@histoteach.de</a>
-          </div>
-
-          <div class="contact-block">
-            <div class="muted">Domain</div>
-            <a class="link" href="https://www.histoteach.de">www.histoteach.de</a>
-          </div>
-
-          <div class="contact-block">
-            <div class="strong">Feedback ist willkommen.</div>
-          </div>
-        </div>
-      </article>
-    </section>
 
     <footer class="footer">
       <span>© <span id="y"></span> HistoTeach</span>
@@ -260,6 +192,10 @@
       <span class="muted">Im Aufbau</span>
       <span class="sep">•</span>
       <a class="link subtle" href="impressum.html">Impressum</a>
+      <span class="sep">•</span>
+      <a class="link subtle" href="kontakt.html">Kontakt</a>
+      <span class="sep">•</span>
+      <a class="link subtle" href="ueber-uns.html">Über uns</a>
     </footer>
   </main>
 
@@ -311,6 +247,8 @@
       document.documentElement.setAttribute('data-theme', theme);
       localStorage.setItem('theme', theme);
       themeIcon.textContent = theme === 'dark' ? '☾' : '☀︎';
+      const themeLabel = document.getElementById('themeLabel');
+      if (themeLabel) themeLabel.textContent = theme === 'dark' ? 'Dunkel' : 'Hell';
     }
 
     function toggleTheme() {
@@ -322,6 +260,8 @@
     // Initialize icon based on current theme
     const currentTheme = document.documentElement.getAttribute('data-theme');
     themeIcon.textContent = currentTheme === 'dark' ? '☾' : '☀︎';
+    const themeLabel = document.getElementById('themeLabel');
+    if (themeLabel) themeLabel.textContent = currentTheme === 'dark' ? 'Dunkel' : 'Hell';
 
     themeBtn.addEventListener('click', toggleTheme);
   </script>

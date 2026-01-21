@@ -36,10 +36,6 @@
     </a>
 
     <div class="topbar-actions">
-      <a class="link subtle" href="kontakt.html">Kontakt</a>
-      <button class="iconbtn" id="themeBtn" aria-label="Theme wechseln">
-        <span class="theme-icon" aria-hidden="true">☀︎</span>
-      </button>
       <button class="iconbtn" id="menuBtn" aria-label="Menü öffnen" aria-controls="drawer" aria-expanded="false">
         <span class="icon" aria-hidden="true"></span>
       </button>
@@ -60,8 +56,10 @@
 
     <nav class="drawer-nav" aria-label="Navigation">
       <a href="index.html" class="drawer-link">Startseite</a>
+      <a href="fortschritt.html" class="drawer-link">Fortschritt</a>
+      <a href="release.html" class="drawer-link">Release</a>
+      <a href="index.html#themen" class="drawer-link">Themen</a>
       <a href="ueber-uns.html" class="drawer-link">Über uns</a>
-      <a href="kontakt.html" class="drawer-link">Kontakt</a>
       <a href="login.html" class="drawer-link">Login</a>
       <a href="registrierung.html" class="drawer-link">Registrierung</a>
       <a href="impressum.html" class="drawer-link">Impressum</a>
@@ -76,6 +74,10 @@
         <div class="meta-label">Design</div>
         <div class="meta-value">Editorial • ruhig • clean</div>
       </div>
+      <button class="theme-toggle-drawer" id="themeBtn" aria-label="Theme wechseln">
+        <span class="theme-icon" aria-hidden="true">☀︎</span>
+        <span class="theme-label">Theme: <span id="themeLabel">Hell</span></span>
+      </button>
     </div>
   </aside>
 
@@ -104,6 +106,10 @@
       <span class="muted">Im Aufbau</span>
       <span class="sep">•</span>
       <a class="link subtle" href="impressum.html">Impressum</a>
+      <span class="sep">•</span>
+      <a class="link subtle" href="kontakt.html">Kontakt</a>
+      <span class="sep">•</span>
+      <a class="link subtle" href="ueber-uns.html">Über uns</a>
     </footer>
   </main>
 
@@ -155,6 +161,8 @@
       document.documentElement.setAttribute('data-theme', theme);
       localStorage.setItem('theme', theme);
       themeIcon.textContent = theme === 'dark' ? '☾' : '☀︎';
+      const themeLabel = document.getElementById('themeLabel');
+      if (themeLabel) themeLabel.textContent = theme === 'dark' ? 'Dunkel' : 'Hell';
     }
 
     function toggleTheme() {
@@ -166,6 +174,8 @@
     // Initialize icon based on current theme
     const currentTheme = document.documentElement.getAttribute('data-theme');
     themeIcon.textContent = currentTheme === 'dark' ? '☾' : '☀︎';
+    const themeLabel = document.getElementById('themeLabel');
+    if (themeLabel) themeLabel.textContent = currentTheme === 'dark' ? 'Dunkel' : 'Hell';
 
     themeBtn.addEventListener('click', toggleTheme);
   </script>
