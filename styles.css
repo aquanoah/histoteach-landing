@@ -42,14 +42,11 @@
   --sans: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   --serif: "Libre Baskerville", Georgia, serif;
 
-  /* Global background gradients */
-  --bg-radial-1: radial-gradient(1200px 700px at 18% 15%, rgba(159,183,229,0.15), transparent 60%);
-  --bg-radial-2: radial-gradient(1000px 680px at 82% 30%, rgba(199,162,94,0.08), transparent 55%);
-  --bg-linear: linear-gradient(180deg, var(--mw), var(--gw));
-  
-  /* Noise texture */
-  --noise-color: rgba(0,0,0,0.03);
-  --noise-opacity: 0.4;
+  /* Global background gradients - clean, no patterns */
+  --bg-radial-1: radial-gradient(1400px 900px at 20% 10%, rgba(159,183,229,0.12), transparent 65%);
+  --bg-radial-2: radial-gradient(1300px 800px at 80% 35%, rgba(199,162,94,0.08), transparent 60%);
+  --bg-radial-3: radial-gradient(1100px 750px at 50% 85%, rgba(159,183,229,0.06), transparent 58%);
+  --bg-linear: linear-gradient(180deg, var(--mw) 0%, var(--gw) 100%);
 }
 
 [data-theme="dark"]{
@@ -69,14 +66,11 @@
   --blueDeep:#AFC2EB;
   --gold:#C7A25E;
 
-  /* Global background gradients for dark mode */
-  --bg-radial-1: radial-gradient(1200px 700px at 18% 15%, rgba(159,183,229,0.10), transparent 60%);
-  --bg-radial-2: radial-gradient(1000px 680px at 82% 30%, rgba(199,162,94,0.06), transparent 55%);
-  --bg-linear: linear-gradient(180deg, var(--mw), var(--gw));
-  
-  /* Noise texture */
-  --noise-color: rgba(255,255,255,0.02);
-  --noise-opacity: 0.5;
+  /* Global background gradients for dark mode - clean, no patterns */
+  --bg-radial-1: radial-gradient(1400px 900px at 20% 10%, rgba(159,183,229,0.08), transparent 65%);
+  --bg-radial-2: radial-gradient(1300px 800px at 80% 35%, rgba(199,162,94,0.05), transparent 60%);
+  --bg-radial-3: radial-gradient(1100px 750px at 50% 85%, rgba(159,183,229,0.05), transparent 58%);
+  --bg-linear: linear-gradient(180deg, var(--mw) 0%, var(--gw) 100%);
 }
 
 /* Dark mode (B: just darkmode) - fallback for prefers-color-scheme */
@@ -98,14 +92,11 @@
     --blueDeep:#AFC2EB;
     --gold:#C7A25E;
 
-    /* Global background gradients for dark mode */
-    --bg-radial-1: radial-gradient(1200px 700px at 18% 15%, rgba(159,183,229,0.10), transparent 60%);
-    --bg-radial-2: radial-gradient(1000px 680px at 82% 30%, rgba(199,162,94,0.06), transparent 55%);
-    --bg-linear: linear-gradient(180deg, var(--mw), var(--gw));
-    
-    /* Noise texture */
-    --noise-color: rgba(255,255,255,0.02);
-    --noise-opacity: 0.5;
+    /* Global background gradients for dark mode - clean, no patterns */
+    --bg-radial-1: radial-gradient(1400px 900px at 20% 10%, rgba(159,183,229,0.08), transparent 65%);
+    --bg-radial-2: radial-gradient(1300px 800px at 80% 35%, rgba(199,162,94,0.05), transparent 60%);
+    --bg-radial-3: radial-gradient(1100px 750px at 50% 85%, rgba(159,183,229,0.05), transparent 58%);
+    --bg-linear: linear-gradient(180deg, var(--mw) 0%, var(--gw) 100%);
   }
 }
 
@@ -122,30 +113,18 @@ body{
   position: relative;
 }
 
-/* Global background layer - fixed to viewport, covers everything */
+/* Global background layer - fixed to viewport, clean gradients only */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  z-index: -2;
+  z-index: -1;
   background: 
     var(--bg-radial-1),
     var(--bg-radial-2),
+    var(--bg-radial-3),
     var(--bg-linear);
   background-attachment: fixed;
-  pointer-events: none;
-}
-
-/* Optional subtle noise texture */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background-image: 
-    repeating-linear-gradient(0deg, transparent, transparent 2px, var(--noise-color) 2px, var(--noise-color) 4px),
-    repeating-linear-gradient(90deg, transparent, transparent 2px, var(--noise-color) 2px, var(--noise-color) 4px);
-  opacity: var(--noise-opacity);
   pointer-events: none;
 }
 
