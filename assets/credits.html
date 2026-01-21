@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bildnachweise & Credits – HistoTeach</title>
+  <meta name="description" content="Bildnachweise und Quellen für auf HistoTeach verwendete Medien." />
+  <meta name="theme-color" content="#FBFCF6" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E0F12" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/assets/styles.css" />
+
+  <script>
+    // Theme initialization (prevent FOUC)
+    (function() {
+      const saved = localStorage.getItem('theme');
+      const theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+
+<body>
+  <!-- Top bar (quiet) -->
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="HistoTeach">
+      <span class="mark" aria-hidden="true">H</span>
+      <span class="brandtext">
+        <span class="brandname">HistoTeach</span>
+        <span class="brandsub">Lernplattform • im Aufbau</span>
+      </span>
+    </a>
+
+    <div class="topbar-actions">
+      <button class="iconbtn" id="menuBtn" aria-label="Menü öffnen" aria-controls="drawer" aria-expanded="false">
+        <span class="icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Drawer -->
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <div class="drawer-title">
+        <span class="dotgold" aria-hidden="true"></span>
+        Menü
+      </div>
+      <button class="iconbtn" id="closeBtn" aria-label="Menü schließen">
+        <span class="icon close" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <nav class="drawer-nav" aria-label="Navigation">
+      <a href="/" class="drawer-link">Startseite</a>
+      <a href="/fortschritt/" class="drawer-link">Fortschritt</a>
+      <a href="/release/" class="drawer-link">Release</a>
+      <a href="/#themen" class="drawer-link">Themen</a>
+      <a href="/ueber-uns/" class="drawer-link">Über uns</a>
+      <a href="/login/" class="drawer-link">Login</a>
+      <a href="/registrierung/" class="drawer-link">Registrierung</a>
+      <a href="/impressum/" class="drawer-link">Impressum</a>
+    </nav>
+
+    <div class="drawer-foot">
+      <button class="theme-toggle-drawer" id="themeBtn" aria-label="Theme wechseln">
+        <span class="theme-icon" aria-hidden="true">☀︎</span>
+        <span class="theme-label">Theme: <span id="themeLabel">Hell</span></span>
+      </button>
+    </div>
+  </aside>
+
+  <div class="backdrop" id="backdrop" hidden></div>
+
+  <!-- Main -->
+  <main class="wrap article-page">
+    <section class="article-hero">
+      <p class="kicker">
+        <span class="dotgold" aria-hidden="true"></span>
+        Legal
+      </p>
+      <h1 class="headline">Bildnachweise & Credits</h1>
+      <p class="article-intro">
+        Alle auf HistoTeach verwendeten Bilder und Medien stammen aus lizenzierten oder freien Quellen. Hier findest du die vollständigen Nachweise und Quellenangaben.
+      </p>
+    </section>
+
+    <article class="article-content">
+      <section class="article-section">
+        <h2>Bilder</h2>
+        
+        <div class="glossary-item" style="margin-bottom: 18px;">
+          <dt>Parthenon (Antikes Griechenland)</dt>
+          <dd style="margin-top: 8px; line-height: 1.7;">
+            <strong>Foto:</strong> Parthenon.JPG<br>
+            <strong>Autor:</strong> © <a href="https://commons.wikimedia.org/wiki/User:Onkel_Tuca" class="link" target="_blank" rel="noopener">Onkel Tuca!</a><br>
+            <strong>Datum:</strong> 5. April 2007<br>
+            <strong>Quelle:</strong> <a href="https://commons.wikimedia.org/wiki/File:Parthenon.JPG" class="link" target="_blank" rel="noopener">Wikimedia Commons</a><br>
+            <strong>Lizenz:</strong> 
+            <a href="https://creativecommons.org/licenses/by-sa/3.0/" class="link" target="_blank" rel="noopener">CC BY-SA 3.0 Unported</a> und 
+            <a href="https://www.gnu.org/licenses/fdl-1.2.html" class="link" target="_blank" rel="noopener">GFDL</a><br>
+            <strong>Bearbeitung:</strong> Möglicherweise zugeschnitten oder farblich angepasst für die Verwendung auf HistoTeach.
+          </dd>
+        </div>
+      </section>
+
+      <section class="article-section">
+        <h2>Weitere Quellen</h2>
+        <p>
+          Alle weiteren auf HistoTeach verwendeten Materialien werden hier dokumentiert, sobald sie hinzugefügt werden.
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>Kontakt bei Fragen</h2>
+        <p>
+          Falls du Fragen zu den Bildnachweisen hast oder ein Problem mit der Lizenzierung melden möchtest, kontaktiere uns bitte über die <a href="/kontakt/" class="link">Kontakt-Seite</a>.
+        </p>
+      </section>
+    </article>
+
+    <footer class="footer">
+      <span>© <span id="y"></span> HistoTeach</span>
+      <span class="sep">•</span>
+      <span class="muted">Im Aufbau</span>
+      <span class="sep">•</span>
+      <a class="link subtle" href="/impressum/">Impressum</a>
+      <span class="sep">•</span>
+      <a class="link subtle" href="/kontakt/">Kontakt</a>
+      <span class="sep">•</span>
+      <a class="link subtle" href="/ueber-uns/">Über uns</a>
+      <span class="sep">•</span>
+      <a class="link subtle" href="/assets/credits.html">Credits</a>
+    </footer>
+  </main>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>

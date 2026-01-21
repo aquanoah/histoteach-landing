@@ -1052,6 +1052,26 @@ strong{ font-weight:600; }
   padding: 34px 0 14px;
 }
 
+.article-hero .hero-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+@media (min-width: 768px){
+  .article-hero .hero-grid{
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 28px;
+  }
+}
+
+.article-hero .hero-copy{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .article-intro{
   margin: 14px 0 0;
   max-width: 68ch;
@@ -1182,6 +1202,16 @@ strong{ font-weight:600; }
   letter-spacing: -0.4px;
   font-size: clamp(24px, 3vw, 28px);
   margin: 0 0 18px;
+  color: var(--text);
+  scroll-margin-top: 80px;
+}
+
+.article-section h3{
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  font-size: clamp(18px, 2.5vw, 20px);
+  margin: 28px 0 14px;
   color: var(--text);
   scroll-margin-top: 80px;
 }
