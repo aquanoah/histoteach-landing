@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
 
   <script>
     // Theme initialization (prevent FOUC)
@@ -122,16 +122,22 @@
       </header>
 
       <div class="themes-scroll">
-        <div class="theme-card">
+        <a href="/themen/griechenland/" class="theme-card">
           <div class="card-image"></div>
           <h3 class="theme-card-title">Antikes Griechenland</h3>
           <p class="theme-card-text">Stadtstaaten, Streit, Ideen. In Athen entsteht etwas, das nach Zukunft riecht: Demokratie. Und gleichzeitig zeigen Kriege, wie zerbrechlich sie ist.</p>
-        </div>
+        </a>
 
         <div class="theme-card">
           <div class="card-image"></div>
           <h3 class="theme-card-title">Antikes Ägypten</h3>
           <p class="theme-card-text">Ein Reich, das Jahrtausende überdauert. Götter, Rituale und Macht sind eins – und der Nil diktiert das Leben. Hinter Monumenten steckt Alltag, Politik und Kontrolle.</p>
+        </div>
+
+        <div class="theme-card">
+          <div class="card-image"></div>
+          <h3 class="theme-card-title">Römisches Reich</h3>
+          <p class="theme-card-text">Vom Stadtstaat zur Weltmacht. Ordnung, Straßen, Gesetze – und der Preis dafür. Wenn ein Imperium wankt, zieht es alles mit.</p>
         </div>
 
         <div class="theme-card">
@@ -142,14 +148,14 @@
 
         <div class="theme-card">
           <div class="card-image"></div>
-          <h3 class="theme-card-title">Weimarer Republik</h3>
-          <p class="theme-card-text">Zwischen Aufbruch und Absturz. Kultur blüht, während Krisen das System zerreiben. Und in der Unsicherheit wird Radikales plötzlich „normal".</p>
+          <h3 class="theme-card-title">Erster Weltkrieg</h3>
+          <p class="theme-card-text">Ein Funke – und die Welt steht in Flammen. Maschinenkrieg verändert alles: Front, Heimat, Politik. Danach ist nichts mehr „wie vorher".</p>
         </div>
 
         <div class="theme-card">
           <div class="card-image"></div>
-          <h3 class="theme-card-title">Erster Weltkrieg</h3>
-          <p class="theme-card-text">Ein Funke – und die Welt steht in Flammen. Maschinenkrieg verändert alles: Front, Heimat, Politik. Danach ist nichts mehr „wie vorher".</p>
+          <h3 class="theme-card-title">Weimarer Republik</h3>
+          <p class="theme-card-text">Zwischen Aufbruch und Absturz. Kultur blüht, während Krisen das System zerreiben. Und in der Unsicherheit wird Radikales plötzlich „normal".</p>
         </div>
 
         <div class="theme-card">
@@ -162,12 +168,6 @@
           <div class="card-image"></div>
           <h3 class="theme-card-title">Kalter Krieg</h3>
           <p class="theme-card-text">Zwei Systeme, ein Dauerzustand aus Angst und Propaganda. Die Front verläuft selten dort, wo man sie sieht. Und trotzdem entscheidet er über Leben, Grenzen, Freiheit.</p>
-        </div>
-
-        <div class="theme-card">
-          <div class="card-image"></div>
-          <h3 class="theme-card-title">Römisches Reich</h3>
-          <p class="theme-card-text">Vom Stadtstaat zur Weltmacht. Ordnung, Straßen, Gesetze – und der Preis dafür. Wenn ein Imperium wankt, zieht es alles mit.</p>
         </div>
       </div>
     </section>
@@ -197,71 +197,6 @@
     </footer>
   </main>
 
-  <script>
-    // Year
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Drawer logic (clean, minimal, accessible)
-    const drawer = document.getElementById('drawer');
-    const menuBtn = document.getElementById('menuBtn');
-    const closeBtn = document.getElementById('closeBtn');
-    const backdrop = document.getElementById('backdrop');
-
-    function openDrawer() {
-      drawer.classList.add('open');
-      drawer.setAttribute('aria-hidden', 'false');
-      menuBtn.setAttribute('aria-expanded', 'true');
-      backdrop.hidden = false;
-      requestAnimationFrame(() => backdrop.classList.add('show'));
-      document.body.classList.add('lock');
-    }
-
-    function closeDrawer() {
-      drawer.classList.remove('open');
-      drawer.setAttribute('aria-hidden', 'true');
-      menuBtn.setAttribute('aria-expanded', 'false');
-      backdrop.classList.remove('show');
-      window.setTimeout(() => { backdrop.hidden = true; }, 180);
-      document.body.classList.remove('lock');
-    }
-
-    menuBtn.addEventListener('click', openDrawer);
-    closeBtn.addEventListener('click', closeDrawer);
-    backdrop.addEventListener('click', closeDrawer);
-
-    // Close on Escape
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
-    });
-
-    // Close when clicking a link
-    drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
-
-    // Theme toggle
-    const themeBtn = document.getElementById('themeBtn');
-    const themeIcon = themeBtn.querySelector('.theme-icon');
-
-    function setTheme(theme) {
-      document.documentElement.setAttribute('data-theme', theme);
-      localStorage.setItem('theme', theme);
-      themeIcon.textContent = theme === 'dark' ? '☾' : '☀︎';
-      const themeLabel = document.getElementById('themeLabel');
-      if (themeLabel) themeLabel.textContent = theme === 'dark' ? 'Dunkel' : 'Hell';
-    }
-
-    function toggleTheme() {
-      const current = document.documentElement.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
-      setTheme(next);
-    }
-
-    // Initialize icon based on current theme
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    themeIcon.textContent = currentTheme === 'dark' ? '☾' : '☀︎';
-    const themeLabel = document.getElementById('themeLabel');
-    if (themeLabel) themeLabel.textContent = currentTheme === 'dark' ? 'Dunkel' : 'Hell';
-
-    themeBtn.addEventListener('click', toggleTheme);
-  </script>
+  <script src="assets/app.js"></script>
 </body>
 </html>

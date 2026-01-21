@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
 
   <script>
     // Theme initialization (prevent FOUC)
@@ -120,71 +120,6 @@
     </footer>
   </main>
 
-  <script>
-    // Year
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Drawer logic (clean, minimal, accessible)
-    const drawer = document.getElementById('drawer');
-    const menuBtn = document.getElementById('menuBtn');
-    const closeBtn = document.getElementById('closeBtn');
-    const backdrop = document.getElementById('backdrop');
-
-    function openDrawer() {
-      drawer.classList.add('open');
-      drawer.setAttribute('aria-hidden', 'false');
-      menuBtn.setAttribute('aria-expanded', 'true');
-      backdrop.hidden = false;
-      requestAnimationFrame(() => backdrop.classList.add('show'));
-      document.body.classList.add('lock');
-    }
-
-    function closeDrawer() {
-      drawer.classList.remove('open');
-      drawer.setAttribute('aria-hidden', 'true');
-      menuBtn.setAttribute('aria-expanded', 'false');
-      backdrop.classList.remove('show');
-      window.setTimeout(() => { backdrop.hidden = true; }, 180);
-      document.body.classList.remove('lock');
-    }
-
-    menuBtn.addEventListener('click', openDrawer);
-    closeBtn.addEventListener('click', closeDrawer);
-    backdrop.addEventListener('click', closeDrawer);
-
-    // Close on Escape
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
-    });
-
-    // Close when clicking a link
-    drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
-
-    // Theme toggle
-    const themeBtn = document.getElementById('themeBtn');
-    const themeIcon = themeBtn.querySelector('.theme-icon');
-
-    function setTheme(theme) {
-      document.documentElement.setAttribute('data-theme', theme);
-      localStorage.setItem('theme', theme);
-      themeIcon.textContent = theme === 'dark' ? '☾' : '☀︎';
-      const themeLabel = document.getElementById('themeLabel');
-      if (themeLabel) themeLabel.textContent = theme === 'dark' ? 'Dunkel' : 'Hell';
-    }
-
-    function toggleTheme() {
-      const current = document.documentElement.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
-      setTheme(next);
-    }
-
-    // Initialize icon based on current theme
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    themeIcon.textContent = currentTheme === 'dark' ? '☾' : '☀︎';
-    const themeLabel = document.getElementById('themeLabel');
-    if (themeLabel) themeLabel.textContent = currentTheme === 'dark' ? 'Dunkel' : 'Hell';
-
-    themeBtn.addEventListener('click', toggleTheme);
-  </script>
+  <script src="assets/app.js"></script>
 </body>
 </html>
