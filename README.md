@@ -312,7 +312,7 @@ Feedback und Anregungen sind jederzeit willkommen!
 
 ## 📄 Lizenz & Rechtliches
 
-**Copyright © 2024-2026 HistoTeach**  
+**Copyright © 2024-present HistoTeach**  
 Alle Rechte vorbehalten.
 
 Diese Website und ihr Inhalt sind urheberrechtlich geschützt. Die Nutzung, Vervielfältigung oder Verbreitung ohne ausdrückliche Genehmigung ist nicht gestattet.
@@ -343,7 +343,7 @@ Die Theme-Einstellung wird ausschließlich lokal im Browser gespeichert und verl
 
 ## 📝 Changelog
 
-### v1.0.0 (Januar 2026)
+### v1.0.0 (Januar 2024)
 - Initial Release der Landing Page
 - Vollständiges Design-System
 - Dark Mode Implementation
