@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Antikes Griechenland – Stadtstaaten, Ideen, Konflikte | HistoTeach</title>
+  <meta name="description" content="Im antiken Griechenland entsteht etwas, das bis heute nachwirkt: Politik als Streit um Ideen." />
+  <meta name="theme-color" content="#FBFCF6" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E0F12" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/assets/styles.css" />
+
+  <script>
+    // Theme initialization (prevent FOUC)
+    (function() {
+      const saved = localStorage.getItem('theme');
+      const theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+
+<body>
+  <!-- Top bar (quiet) -->
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="HistoTeach">
+      <span class="mark" aria-hidden="true">H</span>
+      <span class="brandtext">
+        <span class="brandname">HistoTeach</span>
+        <span class="brandsub">Lernplattform • im Aufbau</span>
+      </span>
+    </a>
+
+    <div class="topbar-actions">
+      <button class="iconbtn" id="menuBtn" aria-label="Menü öffnen" aria-controls="drawer" aria-expanded="false">
+        <span class="icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Drawer -->
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <div class="drawer-title">
+        <span class="dotgold" aria-hidden="true"></span>
+        Menü
+      </div>
+      <button class="iconbtn" id="closeBtn" aria-label="Menü schließen">
+        <span class="icon close" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <nav class="drawer-nav" aria-label="Navigation">
+      <a href="/" class="drawer-link">Startseite</a>
+      <a href="/#themen" class="drawer-link">Themen</a>
+      <a href="/fortschritt/" class="drawer-link">Fortschritt</a>
+      <a href="/release/" class="drawer-link">Release</a>
+      <a href="/ueber-uns/" class="drawer-link">Über uns</a>
+      <a href="/login/" class="drawer-link">Login</a>
+      <a href="/registrierung/" class="drawer-link">Registrierung</a>
+      <a href="/impressum/" class="drawer-link">Impressum</a>
+    </nav>
+
+    <div class="drawer-foot">
+      <button class="theme-toggle-drawer" id="themeBtn" aria-label="Theme wechseln">
+        <span class="theme-icon" aria-hidden="true">☀︎</span>
+        <span class="theme-label">Theme: <span id="themeLabel">Hell</span></span>
+      </button>
+    </div>
+  </aside>
+
+  <div class="backdrop" id="backdrop" hidden></div>
+
+  <!-- Main -->
+  <main class="wrap article-page" data-era-start="-800" data-era-end="-146" data-era-label="Antikes Griechenland">
+    <!-- Hero -->
+    <section class="article-hero">
+      <p class="kicker">
+        <span class="dotgold" aria-hidden="true"></span>
+        Thema
+      </p>
+      <h1 class="headline">Antikes Griechenland – Stadtstaaten, Ideen, Konflikte</h1>
+      <p class="article-intro">
+        Im antiken Griechenland entsteht etwas, das bis heute nachwirkt: Politik als Streit um Ideen. Aber zwischen Marmor und Mythen steckt auch harte Realität: Kriege, Machtkämpfe, Propaganda – und eine Demokratie, die nie für alle galt. Diese Seite führt dich durch die Wendepunkte: wie aus Stadtstaaten ein Kulturraum wurde – und warum er am Ende doch unterging.
+      </p>
+    </section>
+
+    <!-- Stats Card -->
+    <section class="stats-section">
+      <div class="stats-card">
+        <div class="stat-item">
+          <span class="stat-label">Zeitraum</span>
+          <span class="stat-value">ca. 800 v. Chr. – 146 v. Chr.</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Epoche</span>
+          <span class="stat-value">Archaik → Klassik → Hellenismus</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Region</span>
+          <span class="stat-value">Ägäis, Griechenland, Kleinasien, später östliches Mittelmeer</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Zentren</span>
+          <span class="stat-value">Athen, Sparta, Korinth, Theben, Milet, später Alexandria</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Kernideen</span>
+          <span class="stat-value">Polis, Bürgerrecht, Demokratie (Athen), Philosophie, Theater, Hopliten</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Lesezeit</span>
+          <span class="stat-value">~20 Minuten</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table of Contents -->
+    <nav class="toc-section" aria-label="Inhaltsverzeichnis">
+      <h2 class="toc-title">Inhaltsverzeichnis</h2>
+      <ol class="toc-list">
+        <li><a href="#section-1" class="toc-link">Was ist eine Polis?</a></li>
+        <li><a href="#section-2" class="toc-link">Kolonisation & Handel</a></li>
+        <li><a href="#section-3" class="toc-link">Sparta vs. Athen</a></li>
+        <li><a href="#section-4" class="toc-link">Perserkriege</a></li>
+        <li><a href="#section-5" class="toc-link">Die athenische Demokratie</a></li>
+        <li><a href="#section-6" class="toc-link">Kultur: Philosophie, Theater, Wissenschaft</a></li>
+        <li><a href="#section-7" class="toc-link">Peloponnesischer Krieg</a></li>
+        <li><a href="#section-8" class="toc-link">Aufstieg Makedoniens</a></li>
+        <li><a href="#section-9" class="toc-link">Alexander der Große & Hellenismus</a></li>
+        <li><a href="#section-10" class="toc-link">Ende der Unabhängigkeit: Rom (146 v. Chr.)</a></li>
+        <li><a href="#section-11" class="toc-link">Was bleibt?</a></li>
+      </ol>
+    </nav>
+
+    <!-- Article Content -->
+    <article class="article-content">
+      <section id="section-1" class="article-section">
+        <h2>Was ist eine Polis?</h2>
+        <p>
+          Das antike Griechenland war kein einheitlicher Staat, sondern ein Flickenteppich aus hunderten kleiner Stadtstaaten – den Poleis. Jede Polis hatte ihre eigene Regierung, ihre eigenen Gesetze, ihre eigene Identität. Athen, Sparta, Korinth, Theben: Das waren nicht nur Namen auf der Karte, sondern eigenständige politische Welten.
+        </p>
+        <p>
+          Eine Polis bestand aus einer befestigten Stadt und dem umliegenden Land. Im Zentrum stand die Akropolis, oft mit Tempeln und öffentlichen Gebäuden. Darunter lag die Agora – der Marktplatz, auf dem nicht nur Handel getrieben wurde, sondern auch Politik gemacht wurde. Hier trafen sich die Bürger, hier wurde diskutiert, hier entstanden Ideen.
+        </p>
+        <p>
+          Aber wer war überhaupt Bürger? Nicht alle, die in einer Polis lebten. Frauen waren ausgeschlossen. Sklaven sowieso. Und auch Fremde – selbst wenn sie seit Generationen dort lebten – hatten keine politischen Rechte. Die Polis war ein exklusiver Club. Und doch: Für die, die dazugehörten, war sie Lebensmittelpunkt, Identität, Heimat.
+        </p>
+        <p>
+          Die Poleis waren stolz auf ihre Unabhängigkeit. Keine wollte sich einer anderen unterordnen. Das führte zu ständigen Konflikten, aber auch zu einem Wettbewerb der Ideen. Jede Polis suchte nach ihrer eigenen Antwort auf die Frage: Wie wollen wir zusammenleben?
+        </p>
+      </section>
+
+      <section id="section-2" class="article-section">
+        <h2>Kolonisation & Handel</h2>
+        <p>
+          Ab dem 8. Jahrhundert v. Chr. wird es eng in Griechenland. Die Bevölkerung wächst, das Land ist knapp, und viele Poleis suchen nach Lösungen. Die Antwort: Kolonisation. Griechische Siedler ziehen los – über das Mittelmeer bis nach Süditalien, Sizilien, Nordafrika, ans Schwarze Meer. Sie gründen neue Städte: Syrakus, Massalia (Marseille), Byzantion (Istanbul).
+        </p>
+        <p>
+          Diese Kolonien sind keine Provinzen – sie sind eigenständige Poleis, die kulturell und wirtschaftlich mit ihrer Mutterstadt verbunden bleiben. Der Handel blüht auf. Griechische Keramik, Olivenöl und Wein gehen raus, Getreide, Metalle und Luxusgüter kommen rein. Hafenstädte wie Korinth werden reich.
+        </p>
+        <p>
+          Durch den Kontakt mit anderen Kulturen – Phöniziern, Ägyptern, Persern – übernehmen die Griechen Wissen, Techniken, Ideen. Sie passen das Phönizische Alphabet an und schaffen damit die Grundlage für ihre eigene Literatur. Sie lernen von ägyptischen Steinmetzen und persischen Architekten.
+        </p>
+        <p>
+          Die Kolonisation verändert Griechenland grundlegend. Das Meer wird zur Lebensader. Und die griechische Kultur? Die wird zu einem mediterranen Phänomen – verbreitet, vernetzt, hybrid.
+        </p>
+      </section>
+
+      <section id="section-3" class="article-section">
+        <h2>Sparta vs. Athen</h2>
+        <p>
+          Wenn man über das antike Griechenland spricht, landet man früher oder später bei diesem Gegensatz: Sparta und Athen. Zwei Poleis, zwei Welten.
+        </p>
+        <p>
+          Sparta war eine Militärgesellschaft. Das Leben drehte sich um eines: den perfekten Krieger. Jungen wurden ab sieben Jahren militärisch gedrillt. Männer lebten bis dreißig in Kasernen. Das Ziel war nicht Individualität, sondern Disziplin, Gehorsam, Stärke. Spartas Armee galt als die beste Griechenlands – gefürchtet, effizient, unerbittlich.
+        </p>
+        <p>
+          Politisch war Sparta konservativ: zwei Könige, ein Rat der Ältesten, eine strenge Hierarchie. Innovation? Unerwünscht. Veränderung? Verdächtig. Sparta hielt an alten Strukturen fest, während der Rest Griechenlands experimentierte.
+        </p>
+        <p>
+          Athen dagegen setzte auf Handel, Kultur, Politik. Die Stadt war laut, chaotisch, lebendig. Auf der Agora wurde gestritten – über Gesetze, über Moral, über die Zukunft. Athen wagte Experimente: neue Regierungsformen, neue Ideen, neue Fragen.
+        </p>
+        <p>
+          Der Kontrast zwischen beiden war nicht nur politisch, sondern auch psychologisch. Sparta verkörperte Ordnung, Athen Freiheit. Sparta Tradition, Athen Fortschritt. Beide verachteten einander – und brauchten einander doch, als der gemeinsame Feind kam.
+        </p>
+      </section>
+
+      <section id="section-4" class="article-section">
+        <h2>Perserkriege</h2>
+        <p>
+          Um 500 v. Chr. ist das Perserreich die Supermacht der damaligen Welt – riesig, reich, militärisch überlegen. Und dann gibt es da die griechischen Stadtstaaten: zerstritten, klein, zersplittert. Kein ernsthafter Gegner. Oder?
+        </p>
+        <p>
+          Als griechische Städte in Kleinasien gegen die persische Herrschaft rebellieren, schickt Athen Unterstützung. Das ist ein Fehler. Der persische König Dareios nimmt das persönlich. 490 v. Chr. landet eine persische Armee bei Marathon, nur 40 Kilometer von Athen entfernt.
+        </p>
+        <p>
+          Die Athener ziehen in die Schlacht – zahlenmäßig unterlegen, aber entschlossen. Und sie gewinnen. Marathon wird zum Symbol: Die freien Poleis können sich gegen ein Imperium behaupten.
+        </p>
+        <p>
+          Zehn Jahre später kommt der nächste Angriff, diesmal unter Dareios' Sohn Xerxes. Eine gewaltige Armee marschiert nach Griechenland. Bei den Thermopylen hält eine kleine Einheit Spartaner – angeführt von König Leonidas – tagelang stand, bevor sie fällt. Heroischer Widerstand, aber letztlich sinnlos. Die Perser brennen Athen nieder.
+        </p>
+        <p>
+          Doch dann kommt Salamis: eine Seeschlacht, in der die griechische Flotte – angeführt von Athen – die persische vernichtet. Xerxes zieht sich zurück. Ein Jahr später werden die Perser bei Plataiai endgültig geschlagen.
+        </p>
+        <p>
+          Die Perserkriege machen die Griechen zum ersten Mal zu „Griechen". Sie definieren sich nicht mehr nur über ihre Polis, sondern auch über ihre Gemeinsamkeit: Sie sind frei, die Perser unfrei. Sie sind rational, die Perser despotisch. Ein Gründungsmythos entsteht – und Athen steht im Zentrum.
+        </p>
+      </section>
+
+      <div class="key-takeaway">
+        <h3>Key Takeaway</h3>
+        <p>
+          Die Perserkriege waren nicht nur militärische Siege – sie prägten das griechische Selbstbild. Athen wurde zur Führungsmacht, das Narrativ von „Freiheit gegen Despotie" entstand, und der Weg zur athenischen Demokratie wurde beschleunigt.
+        </p>
+      </div>
+
+      <section id="section-5" class="article-section">
+        <h2>Die athenische Demokratie</h2>
+        <p>
+          Nach den Perserkriegen blüht Athen auf. Und mit ihm ein politisches Experiment, das bis heute nachwirkt: die Demokratie.
+        </p>
+        <p>
+          Das Wort setzt sich zusammen aus „demos" (Volk) und „kratos" (Herrschaft). Herrschaft des Volkes – klingt einfach, war aber kompliziert. Denn wer war das Volk? Erwachsene männliche Bürger. Keine Frauen, keine Sklaven, keine Fremden. Von etwa 300.000 Einwohnern Athens hatten vielleicht 40.000 politische Rechte. Eine Elite-Demokratie.
+        </p>
+        <p>
+          Aber innerhalb dieser Gruppe war die Beteiligung radikal. Es gab keine Berufspolitiker. Entscheidungen wurden in der Volksversammlung getroffen – jeder durfte reden, jeder durfte abstimmen. Wichtige Ämter wurden verlost, nicht gewählt. Das sollte Korruption verhindern und sicherstellen, dass nicht immer die gleichen Eliten regierten.
+        </p>
+        <p>
+          Das System war laut, chaotisch, manchmal irrational. Demagogen konnten die Massen aufhetzen. Fehlentscheidungen wurden getroffen. Und doch: Es funktionierte. Athen wurde zur kulturellen und wirtschaftlichen Blüte Griechenlands.
+        </p>
+        <p>
+          Die Demokratie war fragil. Sie brauchte Reichtum (aus Handel und Tributzahlungen), militärische Stärke (durch die Flotte) und ein gemeinsames Narrativ (die Perserkriege). Sobald eines davon wegbrach, geriet das System ins Wanken.
+        </p>
+      </section>
+
+      <section id="section-6" class="article-section">
+        <h2>Kultur: Philosophie, Theater, Wissenschaft</h2>
+        <p>
+          Im 5. und 4. Jahrhundert v. Chr. wird Athen zum intellektuellen Zentrum der griechischen Welt. Hier entstehen Ideen, die bis heute wirken.
+        </p>
+        <p>
+          Philosophie wird geboren – nicht als abstraktes Denken, sondern als Methode, die Welt zu verstehen. Sokrates stellt Fragen und nervt damit die Athener. Platon schreibt über den idealen Staat. Aristoteles katalogisiert die Natur, die Logik, die Ethik. Diese Männer definieren, was Wissen ist – und wie man es erlangt.
+        </p>
+        <p>
+          Das Theater wird zur Massenkultur. In riesigen Amphitheatern werden Tragödien aufgeführt – Aischylos, Sophokles, Euripides. Sie erzählen von Göttern, von Schicksal, von menschlicher Hybris. Und zwischen den Zeilen? Politik. Die Stücke reflektieren die Ängste und Hoffnungen ihrer Zeit.
+        </p>
+        <p>
+          Die Wissenschaft macht Fortschritte. Mathematiker wie Pythagoras und Euklid legen Grundlagen. Ärzte wie Hippokrates beginnen, Krankheiten rational zu erklären – nicht als göttliche Strafe, sondern als natürliche Phänomene. Die Welt wird messbar, erklärbar, kontrollierbar.
+        </p>
+        <p>
+          Diese kulturelle Blüte ist kein Zufall. Sie entsteht in einer Gesellschaft, die Diskurs schätzt, die Fragen stellt, die Widerspruch erlaubt. Aber sie ist auch fragil – abhängig von politischer Stabilität und wirtschaftlichem Wohlstand.
+        </p>
+      </section>
+
+      <section id="section-7" class="article-section">
+        <h2>Peloponnesischer Krieg</h2>
+        <p>
+          Nach den Perserkriegen wird Athen zur Hegemonialmacht. Es gründet den Attischen Seebund – offiziell ein Verteidigungsbündnis, faktisch ein Instrument athenischer Dominanz. Andere Poleis zahlen Tribute, Athen kontrolliert die Flotte.
+        </p>
+        <p>
+          Sparta beobachtet das mit Misstrauen. Der alte Gegensatz zwischen beiden Systemen – Sparta militärisch-konservativ, Athen demokratisch-expansiv – wird zur offenen Feindschaft. 431 v. Chr. bricht der Peloponnesische Krieg aus.
+        </p>
+        <p>
+          Der Krieg dauert fast 30 Jahre und ist brutal. Athen setzt auf seine Flotte und seine Mauern, Sparta auf seine Armee. Athen führt kühne, aber riskante Feldzüge – wie die Invasion Siziliens, die katastrophal scheitert. Sparta verbündet sich mit Persien und baut eine eigene Flotte auf.
+        </p>
+        <p>
+          Der Krieg verändert Griechenland. Die Demokratie in Athen wird immer radikaler, gleichzeitig populistischer. Demagogen wie Alkibiades manipulieren die Volksversammlung. Das Vertrauen in Institutionen schwindet. Kriegsverbrechen häufen sich – wie das Massaker auf Melos.
+        </p>
+        <p>
+          404 v. Chr. kapituliert Athen. Die Demokratie wird vorübergehend abgeschafft, die Mauern geschleift, die Flotte aufgelöst. Sparta ist Sieger – aber das geeinte Griechenland gibt es nicht mehr. Die Poleis sind erschöpft, gespalten, misstrauisch. Die Blütezeit ist vorbei.
+        </p>
+      </section>
+
+      <section id="section-8" class="article-section">
+        <h2>Aufstieg Makedoniens</h2>
+        <p>
+          Während die griechischen Poleis einander zerfleischen, wächst im Norden eine Macht heran, die niemand ernst nimmt: Makedonien.
+        </p>
+        <p>
+          Makedonien war kein typischer Stadtstaat. Es war ein Königreich – rückständig, ländlich, von den Griechen als „barbarisch" betrachtet. Aber unter König Philipp II. ändert sich das. Philipp modernisiert die Armee, führt die Phalanx ein – eine dichte Formation schwerbewaffneter Soldaten – und nutzt Diplomatie genauso geschickt wie militärische Gewalt.
+        </p>
+        <p>
+          Die griechischen Poleis unterschätzen ihn. Sie sind zu sehr mit sich selbst beschäftigt – Athen, Theben, Sparta, jeder gegen jeden. Philipp spielt sie gegeneinander aus, kauft Verbündete, schürt Konflikte.
+        </p>
+        <p>
+          338 v. Chr. kommt die Entscheidung: In der Schlacht bei Chaironeia besiegt Philipp eine Allianz aus Athen und Theben. Griechenland ist besiegt – nicht von Persien, sondern von einem König, den sie verachtet haben.
+        </p>
+        <p>
+          Philipp gründet den Korinthischen Bund – eine Allianz unter makedonischer Führung. Die Poleis behalten formale Autonomie, aber echte Unabhängigkeit? Vorbei. Und dann wird Philipp ermordet. Sein Sohn übernimmt. Sein Name: Alexander.
+        </p>
+      </section>
+
+      <section id="section-9" class="article-section">
+        <h2>Alexander der Große & Hellenismus</h2>
+        <p>
+          Alexander ist 20 Jahre alt, als er König wird. Niemand erwartet, dass er lange herrschen wird. Aber innerhalb von 13 Jahren erobert er ein Imperium, das von Griechenland bis Indien reicht.
+        </p>
+        <p>
+          Er zieht nach Osten – gegen Persien, die alte Supermacht. Bei Issos, bei Gaugamela: vernichtende Siege. Das Perserreich bricht zusammen. Alexander zieht weiter: Ägypten, Mesopotamien, bis zum Indus. Überall gründet er Städte – viele heißen Alexandria.
+        </p>
+        <p>
+          Aber Alexander ist mehr als ein Eroberer. Er bringt griechische Kultur mit – Sprache, Philosophie, Theater. Gleichzeitig übernimmt er persische Rituale, ägyptische Symbole, orientalische Herrschaftsformen. Er lässt sich als Gott verehren. Seine Vision: eine Verschmelzung von Ost und West.
+        </p>
+        <p>
+          323 v. Chr. stirbt Alexander in Babylon – mit 32 Jahren, wahrscheinlich an Fieber. Er hinterlässt ein riesiges Reich ohne Nachfolger. Seine Generäle – die Diadochen – zerfleischen das Imperium. Es entstehen neue Reiche: die Ptolemäer in Ägypten, die Seleukiden im Osten, die Antigoniden in Makedonien.
+        </p>
+        <p>
+          Diese Epoche – der Hellenismus – ist eine Mischkultur. Griechische Philosophen lehren in Alexandria. Griechisch wird zur Verkehrssprache des östlichen Mittelmeers. Aber gleichzeitig werden griechische Ideen verändert, angepasst, hybridisiert. Das alte Griechenland? Kulturell dominant, politisch am Ende.
+        </p>
+      </section>
+
+      <section id="section-10" class="article-section">
+        <h2>Ende der Unabhängigkeit: Rom (146 v. Chr.)</h2>
+        <p>
+          Während der hellenistischen Reiche streiten, wächst im Westen eine neue Macht: Rom.
+        </p>
+        <p>
+          Zunächst ist Rom nur ein lokaler Akteur in Italien. Aber nach den Punischen Kriegen – dem langen, brutalen Konflikt mit Karthago – ist Rom zur mediterranen Großmacht geworden. Und Griechenland? Zersplittert, geschwächt, unfähig, sich zu einigen.
+        </p>
+        <p>
+          Rom greift ein – zunächst als „Befreier" gegen Makedonien, später als Eroberer. Die makedonischen Reiche werden geschlagen, die hellenistischen Dynastien fallen. Die griechischen Poleis versuchen noch Widerstand – vergeblich.
+        </p>
+        <p>
+          146 v. Chr. ist das symbolische Ende: Rom zerstört Korinth, eine der reichsten Städte Griechenlands, als Warnung. Griechenland wird zur römischen Provinz Achaia.
+        </p>
+        <p>
+          Politisch ist Griechenland am Ende. Aber kulturell? Rom übernimmt griechische Philosophie, Architektur, Literatur. Römische Aristokraten lernen Griechisch. Griechische Sklaven werden zu Lehrern römischer Kinder. Der römische Dichter Horaz schreibt: „Graecia capta ferum victorem cepit" – Das eroberte Griechenland eroberte seine wilden Sieger.
+        </p>
+        <p>
+          Griechenland ist nicht mehr unabhängig. Aber seine Ideen, seine Kunst, seine Sprache – die überdauern.
+        </p>
+      </section>
+
+      <section id="section-11" class="article-section">
+        <h2>Was bleibt?</h2>
+        <p>
+          Das antike Griechenland war nie ein einheitlicher Staat. Es war ein Labor für politische Experimente, ein Netzwerk aus konkurrierenden Ideen, ein Kulturraum aus Widersprüchen.
+        </p>
+        <p>
+          Was bleibt? Die Polis als Idee – dass Politik ein Streit um Ideen ist, kein bloßes Machtspiel. Die Demokratie als Versprechen – auch wenn sie unvollendet blieb. Die Philosophie als Methode – Fragen zu stellen, Antworten zu prüfen, nichts als selbstverständlich zu akzeptieren.
+        </p>
+        <p>
+          Aber auch: die Kehrseite. Eine Demokratie, die Sklaverei brauchte. Ein Freiheitsbegriff, der Frauen ausschloss. Ein System, das sich selbst zerstörte, weil es Kompromisse nicht zulassen konnte.
+        </p>
+        <p>
+          Das antike Griechenland ist keine perfekte Blaupause. Aber es ist ein Anfang – für Politik, für Philosophie, für die Frage, wie Menschen zusammenleben wollen. Und diese Frage? Die ist heute aktueller denn je.
+        </p>
+      </section>
+    </article>
+
+    <!-- Glossary -->
+    <section class="glossary-section">
+      <h2 class="section-title">Glossar</h2>
+      <dl class="glossary-list">
+        <div class="glossary-item">
+          <dt>Polis</dt>
+          <dd>Griechischer Stadtstaat; politische und kulturelle Einheit aus Stadt und Umland.</dd>
+        </div>
+        <div class="glossary-item">
+          <dt>Demokratie</dt>
+          <dd>Herrschaft des Volkes; in Athen: direkte Beteiligung freier männlicher Bürger an politischen Entscheidungen.</dd>
+        </div>
+        <div class="glossary-item">
+          <dt>Hopliten</dt>
+          <dd>Schwerbewaffnete Fußsoldaten; typisch für griechische Armeen, kämpften in der Phalanx-Formation.</dd>
+        </div>
+        <div class="glossary-item">
+          <dt>Phalanx</dt>
+          <dd>Dichte Formation schwerbewaffneter Soldaten; Hauptkampfformation der griechischen Armeen.</dd>
+        </div>
+        <div class="glossary-item">
+          <dt>Agora</dt>
+          <dd>Marktplatz und politisches Zentrum einer Polis; Ort für Handel, Diskussionen und Versammlungen.</dd>
+        </div>
+        <div class="glossary-item">
+          <dt>Akropolis</dt>
+          <dd>Befestigte Stadtzitadelle; oft mit Tempeln und öffentlichen Gebäuden.</dd>
+        </div>
+        <div class="glossary-item">
+          <dt>Hellenismus</dt>
+          <dd>Epoche nach Alexander dem Großen (ca. 323–30 v. Chr.); Verschmelzung griechischer und orientalischer Kulturen.</dd>
+        </div>
+        <div class="glossary-item">
+          <dt>Attischer Seebund</dt>
+          <dd>Von Athen geführtes Bündnis griechischer Poleis nach den Perserkriegen; faktisch athenisches Herrschaftsinstrument.</dd>
+        </div>
+        <div class="glossary-item">
+          <dt>Peloponnesischer Krieg</dt>
+          <dd>Konflikt zwischen Athen und Sparta (431–404 v. Chr.); endete mit athenischer Niederlage.</dd>
+        </div>
+        <div class="glossary-item">
+          <dt>Diadochen</dt>
+          <dd>Nachfolger Alexanders des Großen; seine Generäle, die das Reich unter sich aufteilten.</dd>
+        </div>
+        <div class="glossary-item">
+          <dt>Archaik</dt>
+          <dd>Frühphase der griechischen Geschichte (ca. 800–500 v. Chr.); Entstehung der Poleis, Kolonisation.</dd>
+        </div>
+        <div class="glossary-item">
+          <dt>Klassik</dt>
+          <dd>Blütezeit Griechenlands (ca. 500–323 v. Chr.); Perserkriege, Demokratie, kulturelle Höhepunkte.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- Quiz -->
+    <section class="quiz-section">
+      <h2 class="section-title">Mini-Quiz</h2>
+      <p class="quiz-intro">Teste dein Wissen – 5 kurze Fragen:</p>
+      <div class="quiz-container">
+        <div class="quiz-item">
+          <p class="quiz-question"><strong>1.</strong> Was war das Besondere an der athenischen Demokratie?</p>
+          <p class="quiz-hint">Tipp: Denk an die Volksversammlung und wer teilnehmen durfte.</p>
+        </div>
+        <div class="quiz-item">
+          <p class="quiz-question"><strong>2.</strong> Warum waren die Perserkriege ein Wendepunkt für Griechenland?</p>
+          <p class="quiz-hint">Tipp: Es geht um Identität und Selbstbild.</p>
+        </div>
+        <div class="quiz-item">
+          <p class="quiz-question"><strong>3.</strong> Was unterschied Sparta von Athen?</p>
+          <p class="quiz-hint">Tipp: Militärgesellschaft vs. Handels- und Kulturmetropole.</p>
+        </div>
+        <div class="quiz-item">
+          <p class="quiz-question"><strong>4.</strong> Was war der Hellenismus?</p>
+          <p class="quiz-hint">Tipp: Nach Alexander – Verschmelzung von Kulturen.</p>
+        </div>
+        <div class="quiz-item">
+          <p class="quiz-question"><strong>5.</strong> Wann endete die politische Unabhängigkeit Griechenlands?</p>
+          <p class="quiz-hint">Tipp: Rom und das Jahr 146 v. Chr.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="y"></span> HistoTeach</span>
+      <span class="sep">•</span>
+      <span class="muted">Im Aufbau</span>
+      <span class="sep">•</span>
+      <a class="link subtle" href="/impressum/">Impressum</a>
+      <span class="sep">•</span>
+      <a class="link subtle" href="/kontakt/">Kontakt</a>
+      <span class="sep">•</span>
+      <a class="link subtle" href="/ueber-uns/">Über uns</a>
+    </footer>
+  </main>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>
