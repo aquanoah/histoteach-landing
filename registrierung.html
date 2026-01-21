@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registrierung — HistoTeach</title>
+  <meta name="description" content="Registrierung bei HistoTeach" />
+  <meta name="theme-color" content="#FBFCF6" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E0F12" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script>
+    // Theme initialization (prevent FOUC)
+    (function() {
+      const saved = localStorage.getItem('theme');
+      const theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+
+<body>
+  <!-- Top bar (quiet) -->
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="HistoTeach">
+      <span class="mark" aria-hidden="true">H</span>
+      <span class="brandtext">
+        <span class="brandname">HistoTeach</span>
+        <span class="brandsub">Lernplattform • im Aufbau</span>
+      </span>
+    </a>
+
+    <div class="topbar-actions">
+      <a class="link subtle" href="kontakt.html">Kontakt</a>
+      <button class="iconbtn" id="themeBtn" aria-label="Theme wechseln">
+        <span class="theme-icon" aria-hidden="true">☀︎</span>
+      </button>
+      <button class="iconbtn" id="menuBtn" aria-label="Menü öffnen" aria-controls="drawer" aria-expanded="false">
+        <span class="icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Drawer -->
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <div class="drawer-title">
+        <span class="dotgold" aria-hidden="true"></span>
+        Menü
+      </div>
+      <button class="iconbtn" id="closeBtn" aria-label="Menü schließen">
+        <span class="icon close" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <nav class="drawer-nav" aria-label="Navigation">
+      <a href="index.html" class="drawer-link">Startseite</a>
+      <a href="ueber-uns.html" class="drawer-link">Über uns</a>
+      <a href="kontakt.html" class="drawer-link">Kontakt</a>
+      <a href="login.html" class="drawer-link">Login</a>
+      <a href="registrierung.html" class="drawer-link">Registrierung</a>
+      <a href="impressum.html" class="drawer-link">Impressum</a>
+    </nav>
+
+    <div class="drawer-foot">
+      <div class="meta">
+        <div class="meta-label">Akzent</div>
+        <div class="meta-value">Babyblau + Gold (sparsam)</div>
+      </div>
+      <div class="meta">
+        <div class="meta-label">Design</div>
+        <div class="meta-value">Editorial • ruhig • clean</div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="backdrop" id="backdrop" hidden></div>
+
+  <!-- Main -->
+  <main class="wrap">
+    <section style="padding: 56px 0 34px;">
+      <article class="card wide">
+        <header class="card-head">
+          <h1 class="card-title" style="font-size: 28px; letter-spacing: -0.4px;">Registrierung</h1>
+        </header>
+
+        <p class="card-text" style="font-weight: 400; margin-bottom: 18px;">Die Registrierung wird mit dem Start der Beta freigeschaltet.</p>
+        <p class="card-text" style="font-weight: 400;">Derzeit ist keine Kontoerstellung möglich.</p>
+
+        <div style="margin-top: 24px;">
+          <a class="btn ghost small" href="index.html">Zurück zur Startseite</a>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="y"></span> HistoTeach</span>
+      <span class="sep">•</span>
+      <span class="muted">Im Aufbau</span>
+      <span class="sep">•</span>
+      <a class="link subtle" href="impressum.html">Impressum</a>
+    </footer>
+  </main>
+
+  <script>
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Drawer logic (clean, minimal, accessible)
+    const drawer = document.getElementById('drawer');
+    const menuBtn = document.getElementById('menuBtn');
+    const closeBtn = document.getElementById('closeBtn');
+    const backdrop = document.getElementById('backdrop');
+
+    function openDrawer() {
+      drawer.classList.add('open');
+      drawer.setAttribute('aria-hidden', 'false');
+      menuBtn.setAttribute('aria-expanded', 'true');
+      backdrop.hidden = false;
+      requestAnimationFrame(() => backdrop.classList.add('show'));
+      document.body.classList.add('lock');
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      drawer.setAttribute('aria-hidden', 'true');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      backdrop.classList.remove('show');
+      window.setTimeout(() => { backdrop.hidden = true; }, 180);
+      document.body.classList.remove('lock');
+    }
+
+    menuBtn.addEventListener('click', openDrawer);
+    closeBtn.addEventListener('click', closeDrawer);
+    backdrop.addEventListener('click', closeDrawer);
+
+    // Close on Escape
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+    });
+
+    // Close when clicking a link
+    drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+
+    // Theme toggle
+    const themeBtn = document.getElementById('themeBtn');
+    const themeIcon = themeBtn.querySelector('.theme-icon');
+
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+      themeIcon.textContent = theme === 'dark' ? '☾' : '☀︎';
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      setTheme(next);
+    }
+
+    // Initialize icon based on current theme
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    themeIcon.textContent = currentTheme === 'dark' ? '☾' : '☀︎';
+
+    themeBtn.addEventListener('click', toggleTheme);
+  </script>
+</body>
+</html>
