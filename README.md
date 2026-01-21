@@ -299,11 +299,11 @@ Die Website funktioniert in allen modernen Browsern:
 ## 📧 Kontakt
 
 **Entwickler**: Noah  
-**E-Mail**: [noah@histoteach.de](mailto:noah@histoteach.de)  
+**E-Mail**: [kontakt@histoteach.de](mailto:kontakt@histoteach.de)  
 **Website**: [www.histoteach.de](https://www.histoteach.de)
 
 ### Beta-Anmeldung
-Interesse an der Beta? Einfach eine Mail an [noah@histoteach.de](mailto:noah@histoteach.de?subject=HistoTeach%20Beta&body=Hi%2C%20ich%20m%C3%B6chte%20bei%20der%20Beta%20dabei%20sein.) mit dem Betreff "HistoTeach Beta".
+Interesse an der Beta? Einfach eine Mail an [kontakt@histoteach.de](mailto:kontakt@histoteach.de?subject=HistoTeach%20Beta&body=Hi%2C%20ich%20m%C3%B6chte%20bei%20der%20Beta%20dabei%20sein.) mit dem Betreff "HistoTeach Beta".
 
 ### Feedback
 Feedback und Anregungen sind jederzeit willkommen! 
