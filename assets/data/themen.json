@@ -1,0 +1,15 @@
+{
+  "themen": [
+    {
+      "id": "griechenland",
+      "title": "Antikes Griechenland",
+      "slug": "/themen/griechenland/",
+      "startYear": -800,
+      "endYear": -146,
+      "eraLabel": "ca. 800–146 v. Chr.",
+      "teaser": "Stadtstaaten, Streit, Ideen. In Athen entsteht etwas, das nach Zukunft riecht: Demokratie. Und gleichzeitig zeigen Kriege, wie zerbrechlich sie ist.",
+      "image": "/assets/img/parthenon.jpg",
+      "imageAlt": "Der Parthenon auf der Akropolis in Athen"
+    }
+  ]
+}
