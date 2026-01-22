@@ -56,6 +56,8 @@ Diese Landing Page dient als Informationsseite während der Entwicklungsphase un
 - **Smooth Animations**: Subtile, Apple-inspirierte Animationen
 - **Performance**: Optimierte Ladezeiten durch Preconnect zu Google Fonts
 - **SEO-freundlich**: Semantisches HTML5, Meta-Tags, strukturierte Daten
+- **Strukturierte Daten**: Themendaten in JSON-Format (`assets/data/themen.json`)
+- **Asset-Organisation**: Bilder, Daten und Styles organisiert im `assets/`-Verzeichnis
 
 ---
 
@@ -67,11 +69,25 @@ histoteach-landing/
 ├── index.html              # Hauptseite (Hero, Themen, Status, Release)
 ├── ueber-uns.html          # Über-uns-Seite
 ├── kontakt.html            # Kontaktseite
+├── fortschritt.html        # Projektfortschritt und Status
+├── release.html            # Release- und Beta-Informationen
 ├── login.html              # Login-Seite (Placeholder)
 ├── registrierung.html      # Registrierungsseite (Placeholder)
 ├── impressum.html          # Impressum
 │
-├── styles.css              # Zentrales Stylesheet mit Design-System
+├── assets/
+│   ├── styles.css          # Zentrales Stylesheet mit Design-System
+│   ├── app.js              # JavaScript für Interaktionen (Drawer, Theme Toggle)
+│   ├── credits.html        # Credits und Danksagungen
+│   ├── data/
+│   │   └── themen.json     # Themendaten
+│   └── img/
+│       ├── parthenon.jpg   # Beispielbild für Theme-Karte
+│       └── parthenon.svg   # SVG-Version
+│
+├── themen/
+│   └── griechenland/
+│       └── index.html      # Themen-Detailseite: Antikes Griechenland
 │
 ├── CNAME                   # Custom Domain-Konfiguration (www.histoteach.de)
 └── README.md               # Diese Datei
@@ -84,9 +100,13 @@ histoteach-landing/
 | `index.html` | Hauptseite mit Hero, Themenübersicht und Projektinfos | ✅ Komplett |
 | `ueber-uns.html` | Information über das Projekt und den Entwickler | ✅ Komplett |
 | `kontakt.html` | Kontaktformular und Kontaktinformationen | ✅ Komplett |
+| `fortschritt.html` | Projektfortschritt und Entwicklungsstatus | ✅ Komplett |
+| `release.html` | Release- und Beta-Informationen | ✅ Komplett |
 | `login.html` | Login-Seite (für zukünftige Plattform) | 🚧 Placeholder |
 | `registrierung.html` | Registrierungsseite (für zukünftige Plattform) | 🚧 Placeholder |
 | `impressum.html` | Rechtliche Pflichtangaben | ✅ Komplett |
+| `assets/credits.html` | Credits und Danksagungen | ✅ Komplett |
+| `themen/griechenland/` | Themen-Detailseite: Antikes Griechenland | ✅ Komplett |
 
 ---
 
@@ -206,7 +226,7 @@ Diese Seite verwendet **keine** Build-Tools, Bundler oder Frameworks:
 ### Modifikationen vornehmen
 
 #### Theme anpassen
-Alle Design-Variablen befinden sich am Anfang von `styles.css`:
+Alle Design-Variablen befinden sich am Anfang von `assets/styles.css`:
 ```css
 :root, [data-theme="light"] {
   --mw: #FBFCF6;
@@ -221,7 +241,7 @@ Alle Design-Variablen befinden sich am Anfang von `styles.css`:
 3. **Texte anpassen**: Direkt in den HTML-Dateien editieren
 
 #### JavaScript-Funktionalität
-Alle Interaktionen befinden sich am Ende von `index.html`:
+Alle Interaktionen befinden sich in `assets/app.js`:
 - **Drawer-Menü**: Öffnen/Schließen-Logik
 - **Theme Toggle**: Hell-/Dunkelmodus-Wechsel
 - **Jahr dynamisch**: Footer-Copyright-Jahr
