@@ -735,6 +735,14 @@ strong{ font-weight:600; }
     linear-gradient(145deg, var(--hbw), var(--gw));
 }
 
+.card-image img,
+.card-image picture{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .theme-card-title{
   margin: 0;
   padding: 14px 14px 6px;
