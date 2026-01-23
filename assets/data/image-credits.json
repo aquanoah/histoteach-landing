@@ -1,0 +1,21 @@
+{
+  "images": [
+    {
+      "slug": "egypt",
+      "cardTitle": "Antikes Ägypten",
+      "motif": "Pyramiden von Gizeh",
+      "imgPath": "/assets/img/egypt-giza.webp",
+      "imgPathFallback": "/assets/img/egypt-giza.jpg",
+      "title": "The Giza pyramids, Cairo. You can see the city in the background.",
+      "author": "Michael Caven",
+      "authorLocation": "Stockholm, Sweden",
+      "dateTaken": "26 March 2010, 10:03",
+      "sourceUrl": "[TODO: Replace with actual Flickr or Commons URL from user's provided link]",
+      "sourceUrlNote": "The exact URL should be obtained from the Commons/Flickr link provided by the user",
+      "licenseName": "CC BY 2.0",
+      "licenseFullName": "Creative Commons Attribution 2.0 Generic",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "modifications": "Zugeschnitten und für Web optimiert (Größe, Kompression)"
+    }
+  ]
+}
