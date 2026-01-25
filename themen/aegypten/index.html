@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Antikes Ägypten – Nil, Königtum, Ewigkeit | HistoTeach</title>
+  <meta name="description" content="Antikes Ägypten: Ein Reich, das Jahrtausende trägt. Der Nil ordnet das Leben, der Pharao bündelt Macht, und die Idee von Ewigkeit formt Politik, Religion und Alltag." />
+  <meta name="theme-color" content="#FBFCF6" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E0F12" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/assets/styles.css" />
+
+  <script>
+    // Theme initialization (prevent FOUC)
+    (function() {
+      const saved = localStorage.getItem('theme');
+      const theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+
+<body>
+  <!-- Top bar (quiet) -->
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="HistoTeach">
+      <span class="mark" aria-hidden="true">H</span>
+      <span class="brandtext">
+        <span class="brandname">HistoTeach</span>
+        <span class="brandsub">Lernplattform • im Aufbau</span>
+      </span>
+    </a>
+
+    <div class="topbar-actions">
+      <button class="iconbtn" id="menuBtn" aria-label="Menü öffnen" aria-controls="drawer" aria-expanded="false">
+        <span class="icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Drawer -->
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <div class="drawer-title">
+        <span class="dotgold" aria-hidden="true"></span>
+        Menü
+      </div>
+      <button class="iconbtn" id="closeBtn" aria-label="Menü schließen">
+        <span class="icon close" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <nav class="drawer-nav" aria-label="Navigation">
+      <a href="/" class="drawer-link">Startseite</a>
+      <a href="/#themen" class="drawer-link">Themen</a>
+      <a href="/fortschritt/" class="drawer-link">Fortschritt</a>
+      <a href="/release/" class="drawer-link">Release</a>
+      <a href="/ueber-uns/" class="drawer-link">Über uns</a>
+      <a href="/login/" class="drawer-link">Login</a>
+      <a href="/registrierung/" class="drawer-link">Registrierung</a>
+      <a href="/impressum/" class="drawer-link">Impressum</a>
+    </nav>
+
+    <div class="drawer-foot">
+      <button class="theme-toggle-drawer" id="themeBtn" aria-label="Theme wechseln">
+        <span class="theme-icon" aria-hidden="true">☀︎</span>
+        <span class="theme-label">Theme: <span id="themeLabel">Hell</span></span>
+      </button>
+    </div>
+  </aside>
+
+  <div class="backdrop" id="backdrop" hidden></div>
+
+  <!-- Main -->
+  <main class="wrap article-page" data-era-start="-3100" data-era-end="-30" data-era-label="Antikes Ägypten">
+    <!-- Hero -->
+    <section class="article-hero">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">
+            <span class="dotgold" aria-hidden="true"></span>
+            Thema
+          </p>
+          <h1 class="headline">Antikes Ägypten</h1>
+          <p class="article-intro">
+            Ein Reich, das sich nicht nach Jahreszahlen anfühlt, sondern nach Ewigkeiten: Antikes Ägypten ordnet das Leben im Rhythmus des Nils, baut Macht in Stein und denkt Politik als Versprechen an die Götter. Wer hier liest, sieht, wie Stabilität konstruiert wird – und warum sie am Ende doch brüchig bleibt.
+          </p>
+        </div>
+        <figure class="hero-visual" aria-label="Pyramiden von Gizeh">
+          <div class="hero-photo" role="img" aria-label="Pyramiden von Gizeh" style="background-image: url('/assets/img/egypt-giza.jpg'), radial-gradient(circle at 65% 32%, rgba(199,162,94,0.22), transparent 52%), radial-gradient(ellipse at 18% 55%, rgba(159,183,229,0.15), transparent 55%), linear-gradient(165deg, #FBFCF6 0%, #F4F4EC 35%, #EDF1FE 68%, #F0EEEA 100%); background-size: cover; background-position: center;"></div>
+          <figcaption class="caption">
+            <span class="caption-label">Bild</span>
+            <span class="caption-text">Pyramiden von Gizeh</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Stats Card -->
+    <section class="stats-section">
+      <div class="stats-card" data-start-year="-3100" data-end-year="-30">
+        <div class="stat-item">
+          <span class="stat-label">Zeitraum</span>
+          <span class="stat-value">ca. 3100–30 v. Chr.</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Region/Schauplatz</span>
+          <span class="stat-value">Niltal und Nildelta, später auch Levante und Nubien</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Schlüsselthemen</span>
+          <span class="stat-value">Königtum, Religion, Verwaltung, Monumente, Alltag</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Warum wichtig</span>
+          <span class="stat-value">Hier entsteht ein Modell von Staatlichkeit, das Stabilität, Ideologie und Bürokratie über Jahrtausende verbindet.</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Lesezeit</span>
+          <span class="stat-value">~22 Minuten</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">ChronoSortKey</span>
+          <span class="stat-value">-3100</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="article-content">
+      <section class="article-section">
+        <h2>Der Nil als Taktgeber: Natur wird Politik</h2>
+        <p>Antikes Ägypten beginnt nicht mit einem Datum, sondern mit einem Rhythmus. Der Nil überflutet, zieht sich zurück, lässt fruchtbaren Schlamm zurück – und gibt damit den Takt vor, den jede Generation kennt. In einer Landschaft, die abseits des Flusses fast vollständig lebensfeindlich ist, entsteht ein Staat, der sich wie ein Band am Wasser entlang zieht. Wer den Nil kontrolliert, kontrolliert das Leben. Das ist der erste, harte Grundsatz ägyptischer Geschichte.</p>
+        <p>Aus der Natur wird Politik. Die Fähigkeit, Bewässerung zu organisieren, Vorräte zu lagern und die Arbeit über die Jahreszeiten zu koordinieren, wird zum Fundament von Macht. Die Könige der Frühzeit – später Pharaonen – sind deshalb nicht nur militärische Führer, sondern Organisationszentren. Die Ordnung des Landes wird zur Ordnung der Welt erklärt. Ma’at, das Prinzip von Wahrheit und Gleichgewicht, ist kein abstrakter Begriff, sondern die Begründung für Herrschaft: Der Pharao hält die Welt im Gleichgewicht – und muss dafür Gehorsam, Arbeit und Abgaben einfordern.</p>
+        <p>Dieser Zusammenhang zwischen Natur und Staat prägt auch die politische Kultur. Herrschaft wird nicht als Willkür verstanden, sondern als Management des Überlebens. Ernten müssen gesichert, Überschwemmungen eingeordnet, Hungersnöte verhindert werden. In den Mythen spiegelt sich dieses Denken: Die Götter ordnen Chaos, und der Pharao setzt diese Ordnung auf der Erde fort. Das ist keine romantische Idee, sondern eine rechtfertigende Logik, die es möglich macht, enorme Arbeitsleistungen zu mobilisieren, ohne dass das System ständig neu erklärt werden muss.</p>
+        <p>Gleichzeitig bedeutet der Nil, dass Ägypten geografisch konzentriert ist. Die Menschen leben dicht beieinander, sichtbar, kontrollierbar, miteinander verbunden. Das fördert eine frühzeitige Zentralisierung, aber es schafft auch Spannungen: Wer am Oberlauf sitzt, spürt die Entscheidungen der Macht anders als derjenige im Delta. Diese räumliche Dynamik zieht sich durch alle Epochen und erklärt, warum es Phasen der Einigung und Phasen der Fragmentierung gibt.</p>
+      </section>
+
+      <section class="article-section">
+        <h2>Königtum in Stein: Macht als sichtbares Versprechen</h2>
+        <p>Wer an Ägypten denkt, denkt an Pyramiden. Sie sind das Symbol eines politischen Systems, das Monumente als Argument nutzt. Im Alten Reich wachsen in Gizeh, Saqqara und Dahschur Bauwerke, die nicht nur Gräber sind, sondern öffentlichen Beweis liefern: Diese Herrschaft ist real, organisiert, leistungsfähig. Tausende Menschen arbeiten, planen, transportieren, rechnen – und genau dadurch entsteht ein Gefühl von Unverrückbarkeit. Die Pyramide ist ein Monument für das Jenseits und ein Statement an die Lebenden.</p>
+        <p>Das Königtum in Ägypten ist nicht nur göttlich legitimiert, es ist ritualisiert. Titel, Darstellungen, Prozessionen und Feste sind Werkzeuge, um die Einheit des Reiches spürbar zu machen. Die Distanz zwischen Herrscher und Bevölkerung wird bewusst aufgebaut, aber nicht als Abgrenzung, sondern als Brücke zu den Göttern. Der Pharao ist kein Politiker im modernen Sinne – er ist ein Knotenpunkt aus Religion, Verwaltung und Symbolik. Die Macht wirkt, weil sie sichtbar bleibt.</p>
+        <p>Gleichzeitig zeigt sich hier die Kehrseite: Je stärker das System auf die Zentralfigur ausgerichtet ist, desto verletzlicher wird es bei Schwäche. Dynastische Krisen, lange Minderjährigkeiten oder regionale Machtverschiebungen führen zu Phasen, die später als „Zwischenzeiten“ beschrieben werden. Das ist kein Untergang, aber ein Hinweis: Auch die scheinbar ewige Ordnung hat Risse.</p>
+        <p>Monumente sind zudem politische Kommunikation. Sie stellen nicht nur Größe dar, sondern erzählen Geschichten: vom Sieg über Chaos, von der Verbindung zwischen Menschen- und Götterwelt, von der Fähigkeit, Zeit zu überdauern. Wer durch ein Tal der Könige geht, sieht keine privaten Gräber, sondern eine Inszenierung des Staates. Die Architektur dient der Erinnerung und der Kontrolle. Sie fixiert ein Bild von Herrschaft, das über Generationen reproduziert wird.</p>
+        <p>Diese Inszenierung funktioniert jedoch nur, weil sie sich in den Alltag übersetzt. Tempel und Bauprojekte schaffen Arbeit, Versorgung und Status. Für viele Menschen ist der Staat nicht abstrakt, sondern konkret: als Baustelle, als Abgabestelle, als Ort, an dem man seine Leistungen eintragen lässt. Das erklärt, warum große Projekte nicht nur als Zwang wahrgenommen werden, sondern auch als Teil eines gesellschaftlichen Sinnzusammenhangs.</p>
+      </section>
+
+      <section class="article-section">
+        <h2>Verwaltung und Schrift: Ordnung braucht Papier</h2>
+        <p>Die Stabilität Ägyptens ist kein Zufall, sondern das Ergebnis einer frühen, ausgebauten Verwaltung. Hier entstehen Schreiberkulturen, die Steuern erfassen, Ernten zählen, Arbeitsdienste planen und Staatsprojekte koordinieren. Schrift ist nicht nur Kultur, sondern Technik. Hieroglyphen, Hieratisch und später Demotisch sind Werkzeuge der Kontrolle – und der Erinnerung. Ein Reich, das sich selbst organisiert, braucht eine Sprache, in der es sich festhalten kann.</p>
+        <p>Diese Verwaltung ist fein verzahnt. Provinzen – später Gaue – verfügen über eigene Beamte, die mit der Zentrale verbunden sind. Tempel wirtschaften als Großbetriebe, sammeln Abgaben und beschäftigen Arbeiter. Der Staat ist kein monolithischer Block, sondern ein Netz aus Institutionen, das sich über Jahrhunderte anpassen kann. Genau diese Anpassung erklärt, warum Ägypten so lange besteht, obwohl Dynastien wechseln, Grenzen schwanken und Fremdherrscher auftreten.</p>
+        <p>Auch hier zeigt sich: Stabilität bedeutet nicht Stille. Beamte konkurrieren um Einfluss, lokale Eliten versuchen, sich Raum zu schaffen, und der Pharao muss Kräfte ausbalancieren. Doch der Staat hält, weil er bürokratisch denkt – und weil Religion diese Ordnung als notwendig und richtig darstellt.</p>
+        <p>Die Verwaltung schafft auch soziale Rollen. Ein Schreiber ist kein Krieger, sondern ein Spezialist für Ordnung. Das erzeugt eine Kultur, in der Bildung – zumindest für kleine Gruppen – ein Weg zu Einfluss ist. In Grabinschriften rühmen sich Beamte ihrer Fähigkeit, Zahlen korrekt zu führen, Ressourcen zu sichern und Projekte abzuschließen. Das klingt technisch, aber es ist politisch: Wer Zahlen beherrscht, beherrscht Entscheidungen.</p>
+        <p>Über Jahrhunderte hinweg entwickeln sich Verwaltungstechniken weiter. Dokumente zeigen wechselnde Steuersysteme, neue Formen der Vorratshaltung, Veränderungen in der Personalorganisation. Ägypten ist keine starre Maschine, sondern ein lernendes System. Die Fähigkeit, sich administrativ anzupassen, macht das Reich widerstandsfähig – selbst in Zeiten äußerer Bedrohung.</p>
+      </section>
+
+      <section class="article-section">
+        <h2>Religion als Architektur der Gesellschaft</h2>
+        <p>Ägyptische Religion ist keine getrennte Sphäre, sondern die unsichtbare Architektur der Gesellschaft. Götter sind allgegenwärtig, aber nicht als ferne Wesen, sondern als Kräfte, die Ernte, Gesundheit, Recht und Macht beeinflussen. Die Tempel sind Orte des Kults, aber zugleich ökonomische Zentren, Bildungsstätten und politische Bühnen. Wer das Jenseits organisiert, organisiert auch das Diesseits.</p>
+        <p>Der Blick auf den Tod ist besonders prägend. Die Vorstellung, dass das Leben nach dem Tod fortgesetzt wird, ist nicht nur Trost, sondern Ordnung: Wer richtig handelt, erhält Zugang zu einem geordneten Jenseits. Die Rituale um Mumifizierung, Grabbeigaben und Totenbücher sind keine Folklore, sondern Ausdruck eines Systems, das moralische Regeln in religiöse Handlungen übersetzt. Die berühmten Grabtexte sind damit auch eine Ethik: Sie sagen, was man getan haben sollte – und was nicht.</p>
+        <p>Das bedeutet jedoch nicht, dass Ägypten eine religiöse Monokultur ist. Götterkulte verändern sich, lokale Traditionen bleiben stark, und Pharaonen nutzen religiöse Innovationen als politische Werkzeuge. Der Versuch Echnatons, den Sonnenkult um Aton zur zentralen Religion zu machen, zeigt, wie riskant es ist, das religiöse Fundament abrupt zu verschieben. Nach seinem Tod wird die Ordnung zurückgedreht – ein leiser Hinweis, wie stark Tradition als politischer Stabilitätsanker wirkt.</p>
+        <p>Religion erzeugt zudem Öffentlichkeit. Feste, Prozessionen und Tempelrituale verbinden Menschen über Regionen hinweg. Wenn der Pharao im Ritual handelt, handelt er stellvertretend für das ganze Land. Dadurch entsteht ein Gefühl von kollektiver Zugehörigkeit, das über lokale Identitäten hinausgeht. Diese gemeinsame symbolische Bühne ist ein wichtiger Grund, warum Ägypten trotz seiner Länge als ein zusammenhängendes Reich wahrgenommen wird.</p>
+        <p>Auch im Alltag sind religiöse Praktiken präsent: Hausaltäre, Amulette, Schutzrituale, Opfergaben. Sie geben Menschen das Gefühl, mit der Ordnung verbunden zu sein, und schaffen Stabilität in einer Welt, die ansonsten von Naturkräften abhängig bleibt. Die religiöse Landschaft ist damit nicht nur staatlich, sondern auch persönlich – und genau deshalb so stabil.</p>
+      </section>
+
+      <section class="article-section">
+        <h2>Gesellschaft und Alltag: Die leise Seite der Macht</h2>
+        <p>Abseits von Tempeln und Palästen lebt die Mehrheit der Menschen in Dörfern, auf Feldern, in Werkstätten. Ägypten ist ein Agrarstaat, und das bestimmt den Rhythmus des Lebens. Bauern arbeiten im Jahreskreis, Handwerker produzieren Werkzeuge, Keramik und Schmuck, Händler verbinden Städte miteinander. Der Staat erscheint im Alltag als Steuerforderung, Arbeitsdienst oder richterliche Autorität – und bleibt damit präsent, auch wenn der Pharao weit weg ist.</p>
+        <p>Bemerkenswert ist die soziale Durchlässigkeit in bestimmten Bereichen. Schreiber können aufsteigen, Handwerker erhalten Anerkennung, und in den Grabinschriften der Mittelklasse klingt Stolz auf den eigenen Beruf an. Frauen besitzen in Ägypten vergleichsweise mehr rechtliche Handlungsmöglichkeiten als in vielen späteren Gesellschaften: Sie können Eigentum besitzen, klagen, Verträge schließen. Das ist keine Gleichberechtigung im modernen Sinn, aber es zeigt, wie vielfältig die Gesellschaft funktioniert.</p>
+        <p>Die Monumente sind deshalb nicht nur Zeichen königlicher Macht, sondern auch Zeugnisse von Handwerk, Organisation und Expertise. Hinter jedem Steinblock steckt eine logistische Leistung, hinter jeder Grabkammer eine Handwerkerwelt. Ägypten ist nicht nur eine Geschichte der Herrscher, sondern ein Geflecht aus Arbeit, Können und Routine.</p>
+        <p>Gleichzeitig ist der Alltag von Abhängigkeiten geprägt. Die Felder gehören häufig Tempeln oder dem Staat, und Abgaben sind selbstverständlich. Die Menschen erleben Ordnung als Erwartung und als Druck. Auch Konflikte im Kleinen sind sichtbar: Streit um Landgrenzen, um Wasserrechte, um Arbeitspflichten. Die Quellen zeigen nicht nur die große Erzählung, sondern auch das alltägliche Ringen um Gerechtigkeit.</p>
+        <p>Dieses Alltagsleben trägt die Stabilität. Wenn die Verwaltung funktioniert und der Nil zuverlässig überschwemmt, entsteht ein Gefühl von Kontinuität. Wenn jedoch Ernten ausfallen oder der Staat zu viel fordert, kippt die Balance. Das macht die ägyptische Geschichte so lehrreich: Sie zeigt, wie eng Stabilität an praktische Lebensbedingungen gebunden ist.</p>
+      </section>
+
+      <section class="article-section">
+        <h2>Krisen, Spätzeit und Nachwirkung: Wenn Dauer zur Aufgabe wird</h2>
+        <p>So dauerhaft das Reich wirkt, so sehr wird es von außen und innen herausgefordert. In der Zweiten Zwischenzeit dringen die Hyksos in den Norden vor, bringen neue Militärtechniken und verändern die politische Landschaft. Im Neuen Reich reagiert Ägypten mit Expansion: Nubien wird gesichert, Feldzüge ziehen in die Levante. Das Reich tritt selbst als imperialer Akteur auf. Doch Expansion bedeutet auch Überdehnung, und die Kräfte müssen immer wieder neu gebündelt werden.</p>
+        <p>Im späten Neuen Reich treten größere Krisen auf: Machtkämpfe, ökonomische Schwierigkeiten, Umweltprobleme, möglicherweise auch klimatische Schwankungen. Berichte über Arbeiterstreiks – etwa im Tal der Könige – zeigen, dass selbst die monumentale Ordnung von unten her unter Druck geraten kann. Die Elite kämpft um Kontrolle, lokale Machthaber gewinnen an Einfluss, und das Reich zerfällt in konkurrierende Zentren. Diese Phase macht sichtbar, dass die ägyptische Stabilität nicht selbstverständlich ist, sondern dauerhaft organisiert werden muss.</p>
+        <p>Die Spätzeit ist geprägt von Fremdherrschaften: Libyer, Nubier, Assyrer, Perser, schließlich Makedonen. Doch selbst in diesen Phasen bleibt die ägyptische Kultur erstaunlich robust. Die neuen Machthaber übernehmen Rituale, Titel, Tempelpolitiken. Ägypten wird nicht ausgelöscht, sondern in ein größeres Machtgefüge eingebunden – und behält dabei seine kulturelle Identität. Das erklärt, warum Ägypten als „Ewigkeitsreich“ wirkt, obwohl politische Formen wechseln.</p>
+        <p>Mit der Eroberung durch Alexander den Großen beginnt eine neue Epoche. Alexandria wird zur Metropole, griechische und ägyptische Kultur mischen sich, und das Reich wird Teil einer größeren hellenistischen Welt. Unter den Ptolemäern bleibt Ägypten formal eigenständig, doch die Machtlogik verändert sich: Die Könige regieren als griechische Dynastie, die ägyptische Traditionen nutzt, um Legitimität zu gewinnen. Das zeigt, wie anpassungsfähig das System ist – und wie stark sein symbolischer Kern bleibt.</p>
+        <p>Die letzte markante Figur dieser Zeit ist Kleopatra VII. Sie steht für das Bemühen, Eigenständigkeit zu bewahren, während Rom immer stärker eingreift. Der Konflikt mit Rom ist nicht nur eine militärische Auseinandersetzung, sondern der Zusammenprall zweier Ordnungen: einer alten, sakralen Monarchie und einer expansiven, republikanisch geprägten Großmacht. Mit der Niederlage Kleopatras und dem Tod durch Selbstmord endet das pharaonische Ägypten, und 30 v. Chr. wird das Land römische Provinz.</p>
+        <p>Das Ende ist dennoch kein Schlussstrich. Ägypten bleibt Kornkammer und Wissenszentrum, seine religiösen Ideen wandern weiter. Der Kult um Isis verbreitet sich im Mittelmeerraum, und in Alexandria entstehen Texte und Debatten, die das Denken der Spätantike prägen. Antikes Ägypten ist deshalb mehr als eine abgeschlossene Epoche: Es ist eine Quelle von Bildern, Verwaltungstechniken und Vorstellungen von Ordnung, die späteren Kulturen als Modell dienen.</p>
+        <p>Für HistoTeach ist Ägypten ein Schlüsselthema: Hier sieht man, wie Geschichte als Mechanik funktioniert. Stabilität entsteht nicht zufällig, sondern durch Systeme, die Menschen binden. Und man sieht, wie diese Bindung Risse bekommt – durch Krisen, durch Fremdeinfluss, durch die eigene Starrheit. Wer das versteht, liest spätere Epochen klarer.</p>
+      </section>
+
+      <section class="article-section">
+        <h2>Kernaussagen</h2>
+        <p>Der Nil ist die politische Grundbedingung Ägyptens und macht Ordnung überhaupt erst möglich.</p>
+        <p>Das Königtum bindet Macht an Religion, Monumente und sichtbare Rituale.</p>
+        <p>Verwaltung und Schrift sind das stille Fundament einer ungewöhnlichen Dauer.</p>
+        <p>Religion ist keine Nebensache, sondern eine Struktur, die Gesellschaft organisiert.</p>
+        <p>Krisen entstehen, wenn Expansion, Klima und innere Konflikte zugleich drücken.</p>
+        <p>Das Ende 30 v. Chr. ist ein Übergang – kulturell wirkt Ägypten weiter.</p>
+      </section>
+
+      <section class="article-section">
+        <h2>Weiter als Nächstes</h2>
+        <p>Wenn du sehen willst, wie Stadtstaaten statt Großkönigtum Politik verändern: <a href="/themen/griechenland/" class="link">Antikes Griechenland</a>.</p>
+        <p>Wie aus dem Mittelmeerraum ein Imperium wird, das Ägypten aufnimmt: <a href="/themen/roemisches-reich/" class="link">Römisches Reich</a>.</p>
+        <p>Und wie Europa nach der Antike eine neue Ordnung sucht: <a href="/themen/mittelalter/" class="link">Mittelalter</a>.</p>
+      </section>
+    </article>
+
+    <!-- CTA Section -->
+    <section class="about-teaser" style="margin-top: 32px;">
+      <p class="about-teaser-label">Weiter erkunden</p>
+      <h2 class="about-teaser-title">Mehr entdecken</h2>
+      <p class="about-teaser-body">Diese Seite ist Teil eines größeren Projekts: HistoTeach bringt Geschichte kuratiert und strukturiert zu dir – ohne Schulbuchgefühl, mit klarem Fokus auf Wendepunkte und Mechaniken.</p>
+      <div class="about-teaser-cta">
+        <a class="btn primary" href="/ueber-uns/">Über uns</a>
+        <a class="btn secondary" href="/#themen">Zurück zu Themen</a>
+      </div>
+    </section>
+
+    <!-- Image Credits Section -->
+    <section class="article-section" style="margin-top: 28px; padding-top: 28px; border-top: 1px solid var(--line);">
+      <h2 style="font-size: 18px; margin-bottom: 12px;">Bildnachweis</h2>
+      <p style="font-size: 14px; color: var(--muted); line-height: 1.7; margin: 0;">
+        <strong>Pyramiden von Gizeh:</strong> Foto in den Projektassets (siehe Hinweise in /assets/img/egypt-giza-README.txt). Bearbeitet (Zuschnitt/Farblook).
+      </p>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="y"></span> HistoTeach</span>
+      <span class="sep">•</span>
+      <span class="muted">Im Aufbau</span>
+      <span class="sep">•</span>
+      <a class="link subtle" href="/impressum/">Impressum</a>
+      <span class="sep">•</span>
+      <a class="link subtle" href="/kontakt/">Kontakt</a>
+      <span class="sep">•</span>
+      <a class="link subtle" href="/ueber-uns/">Über uns</a>
+      <span class="sep">•</span>
+      <a class="link subtle" href="/assets/credits.html">Credits</a>
+    </footer>
+  </main>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>

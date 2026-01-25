@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Römisches Reich – Ordnung, Expansion, Zerfall | HistoTeach</title>
+  <meta name="description" content="Das Römische Reich: Vom Stadtstaat zur Weltmacht. Verwaltung, Recht und Militär formen ein Imperium – und zeigen, wie Ordnung entsteht und warum sie zerbrechen kann." />
+  <meta name="theme-color" content="#FBFCF6" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E0F12" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/assets/styles.css" />
+
+  <script>
+    // Theme initialization (prevent FOUC)
+    (function() {
+      const saved = localStorage.getItem('theme');
+      const theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+
+<body>
+  <!-- Top bar (quiet) -->
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="HistoTeach">
+      <span class="mark" aria-hidden="true">H</span>
+      <span class="brandtext">
+        <span class="brandname">HistoTeach</span>
+        <span class="brandsub">Lernplattform • im Aufbau</span>
+      </span>
+    </a>
+
+    <div class="topbar-actions">
+      <button class="iconbtn" id="menuBtn" aria-label="Menü öffnen" aria-controls="drawer" aria-expanded="false">
+        <span class="icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Drawer -->
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer-head">
+      <div class="drawer-title">
+        <span class="dotgold" aria-hidden="true"></span>
+        Menü
+      </div>
+      <button class="iconbtn" id="closeBtn" aria-label="Menü schließen">
+        <span class="icon close" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <nav class="drawer-nav" aria-label="Navigation">
+      <a href="/" class="drawer-link">Startseite</a>
+      <a href="/#themen" class="drawer-link">Themen</a>
+      <a href="/fortschritt/" class="drawer-link">Fortschritt</a>
+      <a href="/release/" class="drawer-link">Release</a>
+      <a href="/ueber-uns/" class="drawer-link">Über uns</a>
+      <a href="/login/" class="drawer-link">Login</a>
+      <a href="/registrierung/" class="drawer-link">Registrierung</a>
+      <a href="/impressum/" class="drawer-link">Impressum</a>
+    </nav>
+
+    <div class="drawer-foot">
+      <button class="theme-toggle-drawer" id="themeBtn" aria-label="Theme wechseln">
+        <span class="theme-icon" aria-hidden="true">☀︎</span>
+        <span class="theme-label">Theme: <span id="themeLabel">Hell</span></span>
+      </button>
+    </div>
+  </aside>
+
+  <div class="backdrop" id="backdrop" hidden></div>
+
+  <!-- Main -->
+  <main class="wrap article-page" data-era-start="-27" data-era-end="476" data-era-label="Römisches Reich">
+    <!-- Hero -->
+    <section class="article-hero">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">
+            <span class="dotgold" aria-hidden="true"></span>
+            Thema
+          </p>
+          <h1 class="headline">Römisches Reich</h1>
+          <p class="article-intro">
+            Rom ist kein plötzliches Imperium, sondern ein langer Umbau: Aus der Stadt am Tiber wird ein Machtzentrum, das Straßen, Gesetze und Loyalitäten über Kontinente spannt. Wer Rom versteht, versteht, wie Ordnung entsteht – und warum sie sich irgendwann gegen sich selbst richtet.
+          </p>
+        </div>
+        <figure class="hero-visual" aria-label="Stimmungsbild: Forum Romanum">
+          <div class="hero-photo" role="img" aria-label="Stimmungsbild: Forum Romanum" style="background-image: radial-gradient(circle at 72% 28%, rgba(199,162,94,0.22), transparent 52%), radial-gradient(ellipse at 18% 45%, rgba(159,183,229,0.18), transparent 55%), linear-gradient(165deg, #FBFCF6 0%, #F4F4EC 35%, #EDF1FE 68%, #F0EEEA 100%); background-size: cover; background-position: center;"></div>
+          <figcaption class="caption">
+            <span class="caption-label">Mood</span>
+            <span class="caption-text">Forum Romanum • Stein • Ordnung</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Stats Card -->
+    <section class="stats-section">
+      <div class="stats-card" data-start-year="-27" data-end-year="476">
+        <div class="stat-item">
+          <span class="stat-label">Zeitraum</span>
+          <span class="stat-value">27 v. Chr.–476 n. Chr. (Westrom)</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Region/Schauplatz</span>
+          <span class="stat-value">Mittelmeerraum, Europa, Nordafrika, Naher Osten</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Schlüsselthemen</span>
+          <span class="stat-value">Kaiserherrschaft, Recht, Militär, Städte, Religion</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Warum wichtig</span>
+          <span class="stat-value">Rom zeigt, wie Verwaltung und Recht ein Großreich tragen – und welche Kosten die Dauer macht.</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Lesezeit</span>
+          <span class="stat-value">~23 Minuten</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">ChronoSortKey</span>
+          <span class="stat-value">-0027</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="article-content">
+      <section class="article-section">
+        <h2>Vom Bürgerstaat zur Kaiserherrschaft</h2>
+        <p>Das Römische Reich beginnt nicht mit einem heroischen Moment, sondern mit einer Ermüdung. Die römische Republik hat das Mittelmeerraum erobert, aber die innere Ordnung hält dem Druck nicht mehr stand. Bürgerkriege, Machtkämpfe und private Armeen zeigen die Schwächen eines Systems, das für eine Stadt gemacht war, nicht für ein Weltreich. Die Lösung ist nicht sofort sichtbar, doch sie entsteht aus der Notwendigkeit: Zentralisierung.</p>
+        <p>Mit Augustus wird der Umbau offiziell. Die Republik bleibt in ihrer Sprache erhalten, aber die Macht konzentriert sich in einer Hand. Der Princeps – der „Erste Bürger“ – wirkt zunächst als Vermittler, aber seine Befugnisse sind die eines Monarchen. Die römische Gesellschaft akzeptiert diesen Wandel, weil er Stabilität liefert. Das ist ein wiederkehrendes Motiv in Rom: Freiheit wird gerne gegen Ordnung eingetauscht, solange die Ordnung funktioniert.</p>
+        <p>Der Übergang ist leise, aber tiefgreifend. Institutionen bleiben, Rituale bleiben, doch die politische Realität verschiebt sich. Das ist wichtig für das Verständnis von Rom: Es ist ein Reich der Formen. Nicht alles, was existiert, existiert in der Substanz. Rom funktioniert, weil es die Sprache der Tradition respektiert – und sie zugleich umschreibt.</p>
+        <p>Diese doppelte Logik erklärt auch die erstaunliche Akzeptanz des Kaiserreichs. Die Elite behält Status, der Senat bleibt Bühne, und die Bürger erleben vor allem einen Rückgang der inneren Gewalt. Rom tauscht den offenen Streit der Republik gegen die kontrollierte Stabilität der Monarchie. Politische Beteiligung wird eingeschränkt, aber die Alltagswelt wirkt geordnet. Das ist der Preis des römischen Imperiums – und der Grund, warum es als Modell über Jahrhunderte funktioniert.</p>
+        <p>Gleichzeitig steckt in diesem Übergang ein langfristiges Problem: Wenn Legitimität auf Person, Leistung und militärischer Macht beruht, wird jede Nachfolgefrage zur politischen Krise. Das Imperium steht und fällt mit der Fähigkeit, Kontinuität zu sichern. Rom löst dieses Problem nicht endgültig, sondern verschiebt es – und genau diese Verschiebung prägt spätere Krisen.</p>
+      </section>
+
+      <section class="article-section">
+        <h2>Pax Romana: Stabilität als Infrastruktur</h2>
+        <p>Die sogenannte Pax Romana ist nicht einfach Frieden, sondern kontrollierte Ordnung. Straßen, Häfen und Verwaltungseinheiten verbinden das Reich, Waren und Informationen fließen schneller als je zuvor. Die römische Armee hält Grenzen, aber es sind vor allem Steuern, Gerichte und Amtsträger, die die Realität des Reiches ausmachen. Rom ist in den Provinzen weniger als Kultur, sondern als System spürbar.</p>
+        <p>Das Recht ist dabei ein zentrales Werkzeug. Es schafft Erwartungen, regelt Besitz, setzt Verträge durch und ermöglicht Planung. Für viele Menschen wird römische Herrschaft greifbar, weil sie in Gerichten Ordnung erfahren. Das ist eine gewaltige historische Leistung – und gleichzeitig eine Form von Macht: Wer das Recht setzt, setzt die Regeln des Lebens. Rom ist deshalb nicht nur militärisch stark, sondern strukturell wirksam.</p>
+        <p>Diese Stabilität ist jedoch teuer. Sie verlangt regelmäßige Einnahmen, solide Administration und Loyalitäten. Je größer das Reich wird, desto komplexer werden die Systeme. Die Pax Romana ist ein Balanceakt, der auf routinierter Verwaltung beruht. Wenn diese Routine bricht, bricht der Friede schneller, als die Legenden später erzählen.</p>
+        <p>In der Praxis bedeutet das: Beamte zählen, messen, protokollieren. Straßen sind nicht nur für den Handel da, sondern für die Bewegung der Truppen und die schnelle Kommunikation zwischen Zentrum und Provinz. Städte werden zu Knotenpunkten, die römische Ordnung sichtbar machen. Wer eine römische Straße betritt, betritt ein politisches Versprechen: Sicherheit, Berechenbarkeit, Zugehörigkeit.</p>
+        <p>Die Pax Romana ist dabei nicht gleichmäßig. Manche Regionen profitieren stark, andere zahlen den Preis in Form von Abgaben, Zwangsarbeit oder militärischer Präsenz. Gerade diese Ungleichheit erklärt, warum römische Herrschaft in manchen Regionen als Chance, in anderen als Belastung empfunden wird. Stabilität ist nicht neutral – sie ist ein Projekt, das Interessen bündelt.</p>
+      </section>
+
+      <section class="article-section">
+        <h2>Militär und Grenzen: Sicherheit als permanente Aufgabe</h2>
+        <p>Rom bleibt ein militärisches Imperium. Auch wenn Verwaltung und Recht zentrale Rollen spielen, ist die Armee die ultimative Stabilitätsgarantie. Legionen sichern Grenzen am Rhein, an der Donau, in Britannien, im Osten. Diese Grenzen sind nicht nur Linien, sondern Zonen: Handelsräume, Kulturkontakte, Spannungsfelder. Der Limes ist weniger Mauer als Marker für die Frage, wo Ordnung endet und Unsicherheit beginnt.</p>
+        <p>Das Militär ist zugleich ein politischer Faktor. Kaiser steigen mit Unterstützung der Armee auf, und in Krisenzeiten entscheidet Loyalität der Legionen über die Legitimität der Herrschaft. In der frühen Kaiserzeit gelingt es noch, Militär und Politik zu integrieren. Doch je mehr Soldaten aus den Provinzen rekrutiert werden und je stärker lokale Interessen werden, desto schwerer wird es, das Zentrum zu stabilisieren.</p>
+        <p>Das ist eine der großen Spannungen Roms: Eine Armee, die Ordnung schafft, kann diese Ordnung auch brechen. Der Sold ist ein politisches Argument. Wer ihn nicht zahlen kann, verliert Macht. Rom ist deshalb immer auch eine Ökonomie der Sicherheit.</p>
+        <p>Gleichzeitig entsteht eine militärische Kultur, die das Reich prägt. Veteranen erhalten Land, Siedlungen wachsen entlang der Grenzzonen, Handelsbeziehungen folgen der Stationierung von Truppen. So wird die Grenze zu einem sozialen Raum, nicht nur zu einem militärischen. Diese Vermischung von Militär und Zivilgesellschaft macht Rom stark, aber sie macht es auch abhängig von der Stabilität seiner Armeen.</p>
+        <p>Wenn äußere Bedrohungen zunehmen – durch germanische Gruppen, persische Reiche oder Wanderbewegungen –, muss das Militär reagieren. Das zwingt den Staat zu immer höheren Ausgaben und zu strategischen Entscheidungen, die langfristig die Struktur der Provinzen verändern. Rom ist nicht deshalb verwundbar, weil es schwach wäre, sondern weil die Anforderungen an Sicherheit immer weiter steigen.</p>
+      </section>
+
+      <section class="article-section">
+        <h2>Städte, Alltag, Kultur: Das Imperium lebt unten</h2>
+        <p>Rom ist nicht nur Rom. Das Reich lebt in seinen Städten: in Pompeji, Alexandria, Trier, Karthago, Antiochia. Die Urbanisierung schafft eine gemeinsame römische Lebenswelt: Forum, Bäder, Arenen, Tempel, Straßenraster. Die Stadt ist das Modell, nach dem sich das Reich organisiert. Sie ist Verwaltungseinheit, Markt, Bühne und Symbol zugleich.</p>
+        <p>Der Alltag der Menschen ist geprägt von Vielfalt. Sklaven und Freigelassene, Händler und Bauern, Beamte und Soldaten leben in unterschiedlichen Welten, die sich jedoch ständig berühren. Römische Identität ist nicht nur Herkunft, sondern auch Zugehörigkeit zu einer Ordnung. Das Bürgerrecht wird im Laufe der Zeit erweitert, bis es unter Caracalla fast allen freien Bewohnern des Reiches zukommt. Damit wächst die Idee: Rom ist weniger ein Ort als ein Rechtsraum.</p>
+        <p>Kulturell ist Rom ein Sammler. Es übernimmt griechische Bildung, ägyptische Kulte, lokale Traditionen. Das macht das Reich flexibel, aber auch unübersichtlich. Die Einheit entsteht nicht durch Uniformität, sondern durch einen gemeinsamen Rahmen. Das ist ein Grund, warum Rom so lange besteht – und warum sein Erbe so weit reicht.</p>
+        <p>Auch wirtschaftlich entsteht ein dichtes Netz. Händler transportieren Öl, Wein, Getreide, Metall und Luxusgüter über das Meer und über Land. Diese Verbindung von Märkten macht das Reich reich, aber sie macht es auch sensibel für Krisen: Eine unterbrochene Handelsroute, ein missratener Erntezyklus, politische Unruhe – all das kann regionale Krisen verstärken. Rom wirkt stabil, aber es hängt an einem komplexen Kreislauf.</p>
+        <p>Im Alltag entsteht eine römische Kultur des Öffentlichen. Bäder, Spiele, öffentliche Reden, Tempelfeste – das Reich lebt von Ritualen, die Zugehörigkeit erzeugen. Wer an einem Fest teilnimmt, erlebt Rom als Gemeinschaft. Gleichzeitig zeigen die sozialen Unterschiede, wie ungleich diese Gemeinschaft ist. Reichtum, Status und Herkunft bleiben entscheidend. Rom ist ein Ordnungsversprechen, aber kein egalitäres System.</p>
+      </section>
+
+      <section class="article-section">
+        <h2>Religion und Wandel: Vom Vielgötterreich zum Christentum</h2>
+        <p>In der frühen Kaiserzeit wirkt Religion integrativ. Der Kaiserkult verbindet die Provinzen, lokale Götter werden in die römische Welt eingepasst. Religionspolitik ist dabei immer auch Loyalitätspolitik. Wer opfert, bekennt sich zur Ordnung. Wer sich weigert, stellt diese Ordnung infrage – nicht wegen des Glaubens, sondern wegen der politischen Geste.</p>
+        <p>Mit der Ausbreitung des Christentums entsteht eine neue Dynamik. Die christliche Gemeinschaft bildet eine Alternative zur römischen Identität, die nicht an Stadt, Tempel oder Kaiser gebunden ist. Das führt zu Konflikten, aber auch zu Anpassungen. Als das Christentum im 4. Jahrhundert offiziell anerkannt und später zur Staatsreligion wird, verändert sich die symbolische Struktur des Reiches. Das Imperium findet eine neue ideologische Klammer – und verschiebt damit seinen Charakter.</p>
+        <p>Diese Transformation zeigt, wie flexibel Rom sein kann: Es widersteht nicht nur, sondern integriert. Zugleich zeigt sie, dass Rom nicht nur auf militärischer und administrativer Macht beruht, sondern auch auf gemeinsamen Vorstellungen. Wenn sich diese Vorstellungen ändern, verändert sich das Reich selbst.</p>
+        <p>Religionspolitik wird dadurch zu einem Instrument der Neuordnung. Die Kirche baut Strukturen auf, die in vielen Regionen Stabilität bieten, während staatliche Institutionen schwächer werden. So entsteht eine neue Form von Autorität, die sich an das römische Erbe anlehnt, aber eigene Wege geht. Das erklärt, warum spätere europäische Gesellschaften stark von römischen Ideen geprägt sind, obwohl das Imperium selbst zerfällt.</p>
+        <p>Für den Alltag bedeutet dieser Wandel, dass alte und neue Praktiken lange nebeneinander existieren. Tempel werden nicht sofort geschlossen, lokale Kulte verschwinden nicht über Nacht. Rom ist ein Reich der Übergänge, und die religiöse Transformation ist ein langsamer Prozess, der die Menschen über Generationen begleitet.</p>
+      </section>
+
+      <section class="article-section">
+        <h2>Krise des 3. Jahrhunderts: Wenn das System ins Rutschen gerät</h2>
+        <p>Im 3. Jahrhundert n. Chr. gerät Rom in eine tiefe Krise. Kaiser wechseln in rascher Folge, Grenzkonflikte nehmen zu, die Wirtschaft leidet, Städte verlieren an Bedeutung. Die Armee wird zum Machtmacher, die Provinzen driften auseinander. Die Krise ist nicht nur militärisch, sondern strukturell: Ein System, das auf dauerhafte Expansion und stabile Verwaltung setzt, stößt an seine Grenzen.</p>
+        <p>Die Antwort ist Reform. Diokletian teilt die Macht, vergrößert die Verwaltung, reorganisiert Steuern und Militär. Die Tetrarchie – die Herrschaft mehrerer Kaiser – ist ein Versuch, Größe durch Dezentralisierung zu beherrschen. Konstantin verlegt die Hauptstadt nach Konstantinopel und schafft damit eine neue Achse des Reiches. Rom reagiert, aber es verändert sich dabei grundlegend.</p>
+        <p>Diese Reformen stabilisieren, doch sie verdeutlichen auch: Die alte Balance ist verloren. Die römische Ordnung wird schwerfälliger, bürokratischer, weniger flexibel. Das Reich hält, aber es ist ein anderes Rom als das der frühen Kaiserzeit.</p>
+        <p>Die Krise wirkt auch psychologisch. In der Literatur und in Inschriften wächst das Gefühl, dass eine alte Welt unsicher geworden ist. Wer zuvor an die Stabilität des Imperiums glaubte, erlebt nun eine Reihe von Notmaßnahmen. Diese mentale Veränderung ist wichtig, weil sie die Bereitschaft erhöht, neue politische und religiöse Formen zu akzeptieren.</p>
+        <p>Gleichzeitig zeigt die Krise, dass Rom nicht nur von äußeren Feinden abhängig ist, sondern von internen Strukturen. Wenn die Steuern nicht fließen, wenn die Verwaltung korrupt oder überfordert ist, wenn die Loyalitäten kippen, dann verliert die Ordnung ihren Kern. Rom kann Reformen durchführen, aber jeder Umbau erhöht die Komplexität – und damit die Anfälligkeit.</p>
+      </section>
+
+      <section class="article-section">
+        <h2>Teilung und Untergang: Das lange Ende Westroms</h2>
+        <p>Die Teilung in Ost- und Westrom ist keine sofortige Spaltung, sondern ein Prozess. Während der Osten wirtschaftlich stärker bleibt und sich in Byzanz weiterentwickelt, ist der Westen verletzlicher. Germanische Gruppen werden zu Föderaten, Grenzen werden porös, und die zentrale Autorität zerfällt. 476 n. Chr. gilt als symbolisches Ende Westroms, doch viele Strukturen leben fort.</p>
+        <p>Der Untergang ist deshalb weniger ein Katastrophenmoment als ein langsames Umschichten. Die römische Welt löst sich nicht auf, sondern verwandelt sich. Rechtstraditionen, Städte, christliche Institutionen und kulturelle Muster bleiben bestehen und prägen das mittelalterliche Europa. Rom stirbt als politische Einheit, aber es lebt als Idee weiter.</p>
+        <p>Genau das macht Rom so wichtig: Es zeigt, wie ein Imperium nicht nur durch Eroberung wächst, sondern durch die Fähigkeit, Ordnung zu erzeugen – und wie schwer es ist, diese Ordnung zu erhalten, wenn die Bedingungen sich verändern.</p>
+        <p>Der Blick auf Westrom zeigt auch, dass das Ende nicht überall gleich ist. In manchen Regionen bleibt römische Verwaltung lang erhalten, in anderen übernehmen lokale Herrscher die Kontrolle. Die römische Identität wandelt sich dabei in regionale Identitäten, doch sie verschwindet nicht. Das erklärt, warum spätere europäische Königreiche sich auf Rom beziehen, obwohl das Imperium selbst nicht mehr existiert.</p>
+        <p>So wird Rom zu einer Art Erinnerungssystem: eine Sammlung von Gesetzen, Geschichten, Bauformen und politischen Ideen. Dieses Erbe wirkt stärker als das militärische Ende. Die Frage, wie Ordnung geschaffen und gehalten werden kann, bleibt römisch – und taucht in der europäischen Geschichte immer wieder auf.</p>
+      </section>
+
+      <section class="article-section">
+        <h2>Kernaussagen</h2>
+        <p>Rom entsteht aus dem Bedarf nach Stabilität nach Bürgerkriegen.</p>
+        <p>Verwaltung, Recht und Infrastruktur sind die stillen Träger des Imperiums.</p>
+        <p>Das Militär schafft Ordnung und wird zugleich politischer Machtfaktor.</p>
+        <p>Religion und Identität wandeln sich und verändern das Reich von innen.</p>
+        <p>Die Krise des 3. Jahrhunderts zeigt die Grenzen eines überdehnten Systems.</p>
+        <p>Westrom endet politisch, aber seine Strukturen prägen Europa weiter.</p>
+      </section>
+
+      <section class="article-section">
+        <h2>Weiter als Nächstes</h2>
+        <p>Wenn du sehen willst, wie römische Strukturen weiterleben und sich verändern: <a href="/themen/mittelalter/" class="link">Mittelalter</a>.</p>
+        <p>Wie das Ringen um Ideen vor Rom aussah, findest du hier: <a href="/themen/griechenland/" class="link">Antikes Griechenland</a>.</p>
+        <p>Und wie eine spätere Revolution das moderne Europa neu definiert: <a href="/themen/franzoesische-revolution/" class="link">Französische Revolution</a>.</p>
+      </section>
+    </article>
+
+    <!-- CTA Section -->
+    <section class="about-teaser" style="margin-top: 32px;">
+      <p class="about-teaser-label">Weiter erkunden</p>
+      <h2 class="about-teaser-title">Mehr entdecken</h2>
+      <p class="about-teaser-body">Diese Seite ist Teil eines größeren Projekts: HistoTeach bringt Geschichte kuratiert und strukturiert zu dir – ohne Schulbuchgefühl, mit klarem Fokus auf Wendepunkte und Mechaniken.</p>
+      <div class="about-teaser-cta">
+        <a class="btn primary" href="/ueber-uns/">Über uns</a>
+        <a class="btn secondary" href="/#themen">Zurück zu Themen</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="y"></span> HistoTeach</span>
+      <span class="sep">•</span>
+      <span class="muted">Im Aufbau</span>
+      <span class="sep">•</span>
+      <a class="link subtle" href="/impressum/">Impressum</a>
+      <span class="sep">•</span>
+      <a class="link subtle" href="/kontakt/">Kontakt</a>
+      <span class="sep">•</span>
+      <a class="link subtle" href="/ueber-uns/">Über uns</a>
+      <span class="sep">•</span>
+      <a class="link subtle" href="/assets/credits.html">Credits</a>
+    </footer>
+  </main>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>
